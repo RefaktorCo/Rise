@@ -1,3 +1,5 @@
+jQuery(document).ready(function ($) {
+
 if (matchMedia('only screen and (max-width: 768px)').matches) {
 
 var   
@@ -30,7 +32,7 @@ var
 exitProject.hide();
 projectNavigation.hide();
 	  
-$(function(){	
+jQuery(document).ready(function ($) {
 
 
   $(window).bind( 'hashchange', function() {
@@ -316,7 +318,7 @@ var
 exitProject.hide();
 projectNavigation.hide();
 	  
-$(function(){	
+jQuery(document).ready(function ($) {
 
 
   $(window).bind( 'hashchange', function() {
@@ -591,3 +593,4 @@ setTimeout(function() {
 });
 
 }
+});

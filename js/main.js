@@ -1,3 +1,5 @@
+jQuery(document).ready(function ($) {
+
 // Gumby is ready to go
 Gumby.ready(function() {
 	Gumby.log('Gumby is ready to go...', Gumby.dump());
@@ -282,4 +284,5 @@ $(window).scroll(function(){
 			$this.addClass('selected');
 	 });
 	});
+});
 });

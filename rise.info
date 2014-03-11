@@ -11,7 +11,8 @@ stylesheets[all][] = css/mobile.css
 stylesheets[all][] = css/drupal.css
 
 ; Define theme JS.
-scripts[] = js/libs/modernizr-2.6.2.min.js.js
+scripts[] = js/libs/modernizr-2.6.2.min.js
+scripts[] = js/libs/gumby.min.js
 scripts[] = js/plugins.js
 scripts[] = js/main.js
 scripts[] = js/matchMedia.js

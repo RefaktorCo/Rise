@@ -11,16 +11,30 @@ $parent_root = base_path() . drupal_get_path('theme', 'rise');
  */
 function rise_js_alter(&$js) {
   if (isset($js['misc/jquery.js'])) {
-       $jsPath = 'https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js';
-       $js['misc/jquery.js']['version'] = '1.8';
+       $jsPath = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+       $js['misc/jquery.js']['version'] = '1.9.1';
     $js['misc/jquery.js']['data'] = $jsPath;
   }
+}
+
+function rise_links__system_main_menu($variables) {
+  dpm($variables);
+  $html = "<div>\n";
+  $html .= "  <ul>\n";
+  foreach ($variables['links'] as $link) {
+    $html .= "<li>".l($link['title'], $link['href'].$link['custom_path'], $link)."</li>";
+  }
+  $html .= "  </ul>\n";
+  $html .= "</div>\n";
+  return $html;
+  
+  
 }
 
 /**
  * Overrides theme_process_page().
  */
-function rise_process_page(&$variables) {	
+function rise_process_page($variables) {	
   // Assign site name and slogan toggle theme settings to variables.
   $variables['disable_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
   $variables['disable_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
@@ -329,5 +343,3 @@ function rise_user_css() {
   echo "</style>";
   echo "<!-- End user defined CSS -->";	
 }
-
-?>

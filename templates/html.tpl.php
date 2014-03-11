@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Other's HTML template.
+ * Rise's HTML template.
  */
 ?>
 <!DOCTYPE html>
@@ -22,10 +22,14 @@ not-ie" lang="<?php print $language->language; ?>" dir="<?php print $language->d
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!-- Web Fonts  -->
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<!-- abril font -->
+<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<!-- san font -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic,600italic' rel='stylesheet' type='text/css'>
+<!-- serif font -->
+<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 
-<?php other_user_css(); ?>  
+<?php rise_user_css(); ?>  
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
