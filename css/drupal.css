@@ -1,1 +1,11 @@
 header {z-index: 100;}
+.navbar {background: none;}
+.navbar .logo {margin: 0;}
+
+ul.navigation li {background-color: none !important;}
+
+ul.navigation.active {top: -18px !important;}
+
+#logo {
+	margin-top: -8px;
+}

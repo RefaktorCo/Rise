@@ -13,6 +13,7 @@ stylesheets[all][] = css/drupal.css
 ; Define theme JS.
 scripts[] = js/libs/modernizr-2.6.2.min.js
 scripts[] = js/libs/gumby.min.js
+scripts[] = js/jquery.browser.min.js
 scripts[] = js/plugins.js
 scripts[] = js/main.js
 scripts[] = js/matchMedia.js
@@ -20,9 +21,10 @@ scripts[] = js/ajax.js
 
 ; Define theme regions.
 
-regions[site_nav] = Site Navigation
+regions[site_navigation] = Site Navigation
 regions[before_content] = Before Content
 regions[content] = Content
+regions[front_content] = Front Page Content
 regions[sidebar_primary] = Sidebar Primary
 regions[sidebar_secondary] = Sidebar Secondary
 

@@ -1,5 +1,17 @@
 jQuery(document).ready(function ($) {
 
+/* intro text slider initialize
+	=========================*/
+	$('.intro-text-slider').flexslider({
+		animation: "fade",
+		slideshow: true,
+		controlNav: false,
+		directionNav: false, 
+		easing: "easeOutExpo",
+		slideshowSpeed: 2000 
+		
+	});
+
 // Gumby is ready to go
 Gumby.ready(function() {
 	Gumby.log('Gumby is ready to go...', Gumby.dump());
@@ -56,17 +68,7 @@ Gumby.ready(function() {
 	});
 	}
 	
-	/* intro text slider initialize
-	=========================*/
-	$('.intro-text-slider').flexslider({
-		animation: "fade",
-		slideshow: true,
-		controlNav: false,
-		directionNav: false, 
-		easing: "easeOutExpo",
-		slideshowSpeed: 2000 
-		
-	});
+	
 	
 	
 	/* testimonial initialize

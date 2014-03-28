@@ -17,20 +17,6 @@ function rise_js_alter(&$js) {
   }
 }
 
-function rise_links__system_main_menu($variables) {
-  dpm($variables);
-  $html = "<div>\n";
-  $html .= "  <ul>\n";
-  foreach ($variables['links'] as $link) {
-    $html .= "<li>".l($link['title'], $link['href'].$link['custom_path'], $link)."</li>";
-  }
-  $html .= "  </ul>\n";
-  $html .= "</div>\n";
-  return $html;
-  
-  
-}
-
 /**
  * Overrides theme_process_page().
  */
@@ -278,6 +264,13 @@ function rise_field($variables) {
   }
   
   elseif ($variables['element']['#field_name'] == 'field_article_embed') {
+    foreach ($variables['items'] as $delta => $item) {
+      $rendered_items[] = drupal_render($item);
+    }
+    $output .= implode(' ', $rendered_items);
+  }
+  
+  elseif ($variables['element']['#field_name'] == 'field_intro_content') {
     foreach ($variables['items'] as $delta => $item) {
       $rendered_items[] = drupal_render($item);
     }
