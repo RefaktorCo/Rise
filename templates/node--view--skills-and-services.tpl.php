@@ -1,18 +1,20 @@
 <!-- service -->
 <div class="four columns service">
-  <?php if render($content['field_skills_image']): ?>
+  <?php if (render($content['field_skills_image'])): ?>
 	<div class="icon">
 		<!-- you can replace below gif image with fontawesome icon -->
 		<img src="<?php echo file_create_url($node->field_skills_image['und'][0]['uri']); ?>" class="gif-icon" alt="iconnn"/>
 	</div>
 	<?php endif; ?>	
 	<!-- service info -->
+	<p>
 	<?php
     $teaser = strip_tags(render($content['body']));
     echo substr($teaser, 0, 100)."...";
   ?>
-	<!-- read more button -->
+	</p>
 	
+	<!-- read more button -->
 	<div class="modal-button no-mobile">
 		<a href="#" gumby-trigger="#modal_<?php print $node->nid; ?>" class="rise-btn small outline dark centered switch">read more</a>
 		
@@ -25,10 +27,10 @@
 		<div class="content white">
 			<!-- we use gumby-trigger to close modal with id#direction
 				your can have as many models as your choose just use different ids -->
-			<a class="close switch active" gumby-trigger="|#direction"><i class="icon-remove black-text"></i></a>
+			<a class="close switch active" gumby-trigger="|#modal_<?php print $node->nid; ?>"><i class="icon-remove black-text"></i></a>
 			<div class="row">
 				<div class="modal-label">
-					<h6 class="small-radius s-bold">SKILLS AND SERVICES</h6>
+					<h6 class="small-radius s-bold"><?php print t('SKILLS AND SERVICES'); ?></h6>
 				</div>
 				<!-- content side -->
 				<div class="eight columns alpha smalltoppadding">
@@ -37,11 +39,11 @@
 					</div>
 					<?php print render($content['body']); ?>
 				</div>
-				<?php if render($content['field_skills_icon']): ?>
+				<?php if (render($content['field_skills_icon'])): ?>
 				<!-- service icon -->
 				<div class="four columns">
 					<div class="large-icon">
-						<?php strip_tags(render($content['field_skills_icon'])); ?>
+						<?php print render($content['field_skills_icon']); ?>
 					</div>
 				</div>
 				<?php endif; ?>	
