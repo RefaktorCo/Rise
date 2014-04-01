@@ -9,3 +9,7 @@ ul.navigation.active {top: -18px !important;}
 #logo {
 	margin-top: -8px;
 }
+
+.block {
+	height: 100%;
+}

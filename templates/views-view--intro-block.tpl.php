@@ -26,7 +26,9 @@
  *
  * @ingroup views_templates
  */
-?>
+?><!-- begin intro-->
+
+<div id="intro" class="<?php print $classes; ?> tint">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
@@ -83,4 +85,4 @@
       <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
-<?php /* class view */ ?>
+</div><?php /* class view */ ?>
