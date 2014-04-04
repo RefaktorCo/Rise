@@ -7,6 +7,7 @@
 	</div>
 	<?php endif; ?>	
 	<!-- service info -->
+	<h5 class="s-bold"><?php print $title; ?></h5>
 	<p>
 	<?php
     $teaser = strip_tags(render($content['body']));
