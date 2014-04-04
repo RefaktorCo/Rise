@@ -11,6 +11,16 @@ jQuery(document).ready(function ($) {
 		slideshowSpeed: 2000 
 		
 	});
+	
+	$('.flexslider').flexslider({
+                        animationLoop: true,
+                        pauseOnAction: true,
+                        pauseOnHover: true,
+                        smoothHeight: false,
+                        directionNav: true,
+                        controlNav: true,
+                        animation: "slide"
+                    });
 
 // Gumby is ready to go
 Gumby.ready(function() {

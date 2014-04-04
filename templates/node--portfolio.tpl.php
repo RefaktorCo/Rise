@@ -17,10 +17,7 @@ is displayed in portfolio -->
 		<h2 class="bold"><?php print $title; ?></h2>
 		<!-- project detail -->
 		<div class="ten columns alpha project-text">
-		<p>Lorem ipsum dolor sit amet, consectetur 
-		adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-		Nulla quis sem at nibh elementum imperdiet.Duis sagittis ipsum. Lorem ipsum dolor sit amet, 
-		consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+		<?php print render($content['body']); ?>
 		</div>
 		</section>
 		<section class="row bigtoppadding">
@@ -28,18 +25,7 @@ is displayed in portfolio -->
 		<div class="twelve columns">
 		<div class="flexslider">
 		<ul class="slides">
-			<!-- slide one -->
-			<li>
-			<img src="../preview/b.jpg" alt="slide image" class="project-img">
-			</li>
-			<!-- slide two -->
-			<li>
-			<img src="../preview/b.jpg" alt="slide image" class="project-img">
-			</li>
-			<!-- slide three -->
-			<li>
-			<img src="../preview/b.jpg" alt="slide image" class="project-img">
-			</li>
+			<?php print render($content['field_portfolio_image']); ?>
 		</ul>
 		</div>
 		</div>
