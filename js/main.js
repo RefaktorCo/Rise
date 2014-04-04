@@ -13,14 +13,48 @@ jQuery(document).ready(function ($) {
 	});
 	
 	$('.flexslider').flexslider({
-                        animationLoop: true,
-                        pauseOnAction: true,
-                        pauseOnHover: true,
-                        smoothHeight: false,
-                        directionNav: true,
-                        controlNav: true,
-                        animation: "slide"
-                    });
+    animationLoop: true,
+    pauseOnAction: true,
+    pauseOnHover: true,
+    smoothHeight: false,
+    directionNav: true,
+    controlNav: true,
+    animation: "slide"
+  });
+  
+  /* smooth linking
+	=========================*/
+	$('.target').on(Gumby.click, function() {
+	 var href = $(this).attr("href"),
+	 topMenu = $(".navigation"),
+		topMenuHeight = topMenu.outerHeight()+15,
+		  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	  $('html, body').stop().animate({ 
+		  scrollTop: offsetTop
+	  }, 800, 'easeOutExpo');
+	  e.preventDefault();
+	});
+  
+  /* gif animations
+	=========================*/
+	var animations = {
+
+	  init: function(){
+		// Service Gifs
+		$('.service').on('mouseenter', function(e){
+		  var el = $(this).find('.gif-icon');
+		  var src = el.attr('src');
+		  el.attr('src', src.replace('.gif', '_anim.gif'));
+		});
+
+		$('.service').on('mouseleave', function(e){
+		  var el = $(this).find('.gif-icon');
+		  var src = el.attr('src');
+		  el.attr('src', src.replace('_anim.gif', '.gif'));
+		});
+	  }
+	}
+	animations.init();
 
 // Gumby is ready to go
 Gumby.ready(function() {
@@ -38,18 +72,6 @@ Gumby.ready(function() {
 			theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
 		});
 	
-	/* smooth linking
-	=========================*/
-	$('.target').on(Gumby.click, function() {
-	 var href = $(this).attr("href"),
-	 topMenu = $(".navigation"),
-		topMenuHeight = topMenu.outerHeight()+15,
-		  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-	  $('html, body').stop().animate({ 
-		  scrollTop: offsetTop
-	  }, 800, 'easeOutExpo');
-	  e.preventDefault();
-	});
 	
 	/* stat counter
 	=========================*/
@@ -89,26 +111,6 @@ Gumby.ready(function() {
 	});
 
 
-	/* gif animations
-	=========================*/
-	var animations = {
-
-	  init: function(){
-		// Service Gifs
-		$('.service').on('mouseenter', function(e){
-		  var el = $(this).find('.gif-icon');
-		  var src = el.attr('src');
-		  el.attr('src', src.replace('.gif', '_anim.gif'));
-		});
-
-		$('.service').on('mouseleave', function(e){
-		  var el = $(this).find('.gif-icon');
-		  var src = el.attr('src');
-		  el.attr('src', src.replace('_anim.gif', '.gif'));
-		});
-	  }
-	}
-	animations.init();
 	
 	/* twitter
 	=========================*/
