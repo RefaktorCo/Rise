@@ -1,3 +1,9 @@
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">
+		&nbsp;
+	</div>
+</div>
 <!-- header -->
 <header>
 <div class="row navbar">
@@ -32,3 +38,13 @@
 <?php print render($page['front_content']); ?>
 
 <hr>
+<!-- loader -->
+<script type="text/javascript">
+    //<![CDATA[
+        jQuery(document).ready(function ($) {
+        $(window).load(function() { // makes sure the whole site is loaded
+            $("#status").fadeOut(); // will first fade out the loading animation
+            $("#preloader").delay(350).fadeOut("slow"); // will fade out the grey DIV that covers the website.      
+})});
+    //]]>
+</script>

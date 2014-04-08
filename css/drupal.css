@@ -13,3 +13,12 @@ ul.navigation.active {top: -18px !important;}
 #block-views-intro-block-block {
 	height: 100%;
 }
+
+#comments input {
+	background: #eee;
+  color: #1e1e1e;
+  height: 56px;
+  border: 0px;
+  font-weight: 400;
+  font-size: 18px;
+}
