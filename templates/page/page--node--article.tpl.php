@@ -25,17 +25,41 @@
 </div>
 
 </header>
+<!-- begin blog-->
+	<div id="blog">
+		<div class="tint largepadding">
+			<section class="row heading bigtoppadding">
+			<!-- blog heading -->
+			<h1>MY BLOG</h1>
+			<h5 class="eight columns centered">Lorem ipsum dolor sit amet, alienum salutandi evertitur pri te. In fierent concludaturque eos.</h5>
+			</section>
+			<div class="row dots">
+			</div>
+		</div>
 <!-- end header -->
+<?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
+<!-- blog menu -->
+<div class="blog-menu">
+	<section class="row">
+	<!-- blog categories -->
+	<div class="eight columns">
+		<?php print render($page['blog_menu_left']); ?>
+	</div>
+	<!-- blog search -->
+	<div class="four columns">
+		<?php print render($page['blog_menu_right']); ?>
+	</div>
+	</section>
+</div>
+<!-- end blog menu -->
+<?php endif; ?>
 
 <?php print $messages; ?>
 <div class="grey">
-			<!-- begin blog posts row -->
-			<section class="row">
-			<div class="ten columns centered">
-<?php print render($page['content']); ?>
-			</div></section></div>
+  <?php print render($page['content']); ?>
+</div>
 <footer>
 	<section class="row heading">
-			</section>
+	</section>
 </footer>
 

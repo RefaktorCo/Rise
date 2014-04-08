@@ -301,37 +301,36 @@ function rise_field($variables) {
 }
 
 /**
- * Create pagination function using prev_next API().
+ * Theme node pagination function().
  */
-function rise_pagination($node, $mode = 'n') {
-  if (!function_exists('prev_next_nid')) {
-    return NULL;
+function rise_node_pagination($node, $mode = 'n') {
+  $query = new EntityFieldQuery();
+	$query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $node->type);
+  $result = $query->execute();
+  $nids = array_keys($result['node']);
+  
+  while ($node->nid != current($nids)) {
+    next($nids);
   }
- 
+  
   switch($mode) {
     case 'p':
-      $n_nid = prev_next_nid($node->nid, 'prev');
-      $link_text = "Previous post";
+      prev($nids);
     break;
 		
     case 'n':
-      $n_nid = prev_next_nid($node->nid, 'next');
-      $link_text = "Next post";
+      next($nids);
     break;
 		
     default:
     return NULL;
   }
- 
-  if ($n_nid) {
-    $n_node = '';
-    $n_node = node_load($n_nid);
-   
-	  $id =  $n_node->nid; 
-	  return $id; 
-      
-   }
+  
+  return current($nids);
 }
+
 
 /**
  * User CSS function. Separate from rise_preprocess_html so function can be called directly before </head> tag.

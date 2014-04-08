@@ -22,6 +22,8 @@ scripts[] = js/ajax.js
 ; Define theme regions.
 
 regions[site_navigation] = Site Navigation
+regions[blog_menu_left] = Blog Menu Left
+regions[blog_menu_right] = Blog Menu Right
 regions[before_content] = Before Content
 regions[content] = Content
 regions[front_content] = Front Page Content
