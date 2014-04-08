@@ -1,7 +1,6 @@
 <!-- everything inside ajaxpage
 is displayed in portfolio -->
-<div id="ajaxpage">
-	<div class="white">
+
 		<section class="row heading left-text">
 		<!-- project index and specs -->
 		<div class="bigbottompadding">
@@ -30,8 +29,7 @@ is displayed in portfolio -->
 		</div>
 		</div>
 		</section>
-	</div>
-</div>
+
 <!-- end ajaxpage -->
 
 <div class="clear">

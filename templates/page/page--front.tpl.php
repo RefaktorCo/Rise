@@ -38,6 +38,46 @@
 <?php print render($page['front_content']); ?>
 
 <hr>
+
+
+<!-- PROJECT DETAILS CONTAINER -->
+<div id="portfolio-detail">
+	<div class="loading-screen">
+		<div class="logo">
+			<!-- add your logo link -->
+			<img src="img/logo.png" alt="logo">
+		</div>
+	</div>
+	<div class="ajax-section">
+		<div class="clearfix">
+			<!-- PROJECT NAVIGATION AND CLOSE BUTTON -->
+			<div class="ajax-nav">
+				<section class="row">
+				<ul class="project-nav">
+					<li class="prevProject"><a href="#"><i class="icon-chevron-left"></i></a></li>
+					<li class="nextProject"><a href="#"><i class="icon-chevron-right"></i></a></li>
+					<li class="closeProject"><a href="#work"><i class="icon-remove"></i></a></li>
+				</ul>
+				<!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
+				</section>
+			</div>
+			<div class="loader">
+			</div>
+			<!-- PROJECT WILL LOAD INSIDE 'AJAX-INSIDE' -->
+			<div class="ajax-box">
+				<div id="ajax-outside">
+					<div id="ajax-inside">
+					</div>
+				</div>
+			</div>
+			<!-- END AJAX SECTION -->
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<!-- end ajax section -->
+</div>
+<!-- end portfolio detail -->
 <!-- loader -->
 <script type="text/javascript">
     //<![CDATA[
