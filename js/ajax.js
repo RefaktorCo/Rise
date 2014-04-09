@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($){
 
 if (matchMedia('only screen and (max-width: 768px)').matches) {
 
@@ -21,7 +21,7 @@ var
 	  pageRefresh = true,
 	  content = false,
       easing = 'easeOutExpo',
-	  folderName = 'projects',
+	  folderName = 'portfolio',
 	  loader = $('div.loader'),
 	  portfolioGrid = $('#projects.grid'),
 	  projectContainer = $('div.ajax-inside-mobile'),
@@ -32,7 +32,7 @@ var
 exitProject.hide();
 projectNavigation.hide();
 	  
-jQuery(document).ready(function ($) {
+$(function(){	
 
 
   $(window).bind( 'hashchange', function() {
@@ -129,8 +129,6 @@ jQuery(document).ready(function ($) {
                         animation: "slide"
                     });
 
-
-$.stellar('refresh');
 			
 										hideLoader();	
 														  
@@ -307,7 +305,7 @@ var
 	  pageRefresh = true,
 	  content = false,
       easing = 'easeOutExpo',
-	  folderName = 'projects',
+	  folderName = 'portfolio',
 	  loader = $('div.loader'),
 	  portfolioGrid = $('#projects.grid'),
 	  projectContainer = $('div#ajax-inside'),
@@ -318,7 +316,7 @@ var
 exitProject.hide();
 projectNavigation.hide();
 	  
-jQuery(document).ready(function ($) {
+$(function(){	
 
 
   $(window).bind( 'hashchange', function() {
@@ -428,7 +426,6 @@ jQuery(document).ready(function ($) {
                         animation: "fade"
                     });
 
-			$.stellar('refresh');
 										hideLoader();	
 														  
 											
@@ -593,4 +590,5 @@ setTimeout(function() {
 });
 
 }
+
 });

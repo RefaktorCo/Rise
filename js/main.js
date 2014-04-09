@@ -55,23 +55,6 @@ jQuery(document).ready(function ($) {
 	  }
 	}
 	animations.init();
-
-// Gumby is ready to go
-Gumby.ready(function() {
-	Gumby.log('Gumby is ready to go...', Gumby.dump());
-
-	// placeholder polyfil
-	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
-		$('input, textarea').placeholder();
-
-	}
-	
-	/* pretty photo
-	========================= */
-	$("a[data-rel^='prettyPhoto']").prettyPhoto({
-			theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-		});
-	
 	
 	/* stat counter
 	=========================*/
@@ -99,6 +82,25 @@ Gumby.ready(function() {
 			});
 	});
 	}
+
+// Gumby is ready to go
+Gumby.ready(function() {
+	Gumby.log('Gumby is ready to go...', Gumby.dump());
+
+	// placeholder polyfil
+	if(Gumby.isOldie || Gumby.$dom.find('html').hasClass('ie9')) {
+		$('input, textarea').placeholder();
+
+	}
+	
+	/* pretty photo
+	========================= */
+	$("a[data-rel^='prettyPhoto']").prettyPhoto({
+			theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+		});
+	
+	
+	
 	
 	
 	
