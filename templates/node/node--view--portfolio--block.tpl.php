@@ -1,7 +1,7 @@
 <li class="grid-item design development">
 	<div class="grid-project">
 		<!-- ajax link -->
-		<a href="http://localhost:8888/development/rise/#!portfolio/some-title/" class="open-slide">
+		<a href="#!node/<?php print $node->nid; ?>/" class="open-slide">
 		<!-- project image -->
 		<div class="img-box">
 			<?php print render($content['field_portfolio_image']); ?>

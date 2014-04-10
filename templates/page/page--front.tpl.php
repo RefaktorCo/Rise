@@ -45,7 +45,7 @@
 	<div class="loading-screen">
 		<div class="logo">
 			<!-- add your logo link -->
-			<img src="img/logo.png" alt="logo">
+			<img src="<?php print $logo; ?>" alt="logo">
 		</div>
 	</div>
 	<div class="ajax-section">
