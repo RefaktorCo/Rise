@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @file
+ * Connect to Twitter API 1.1.
+ * Slightly modified from http://stackoverflow.com/a/12939923/2704737
+ */
+
 function buildBaseString($baseURI, $method, $params) {
   $r = array();
   ksort($params);

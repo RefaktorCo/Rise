@@ -62,9 +62,9 @@ if($username[0]) {
 			<div class="tweet_time">
 			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $tweet_data[0]["id"]; ?>"><?php print $tweet_created_trimmed; ?></a>
 			</div>
-			<span class="tweet_text">
+			<div class="tweet_text">
 			  <?php print $tweet_text; ?>
-			</span>
+			</div
 		</div>
 		<!-- link to your twitter profile -->
 		<a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>" class="rise-btn light small">Follow me on Twitter!</a>
