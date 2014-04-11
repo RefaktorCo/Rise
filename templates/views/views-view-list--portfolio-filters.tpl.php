@@ -9,10 +9,11 @@
  * @ingroup views_templates
  */
 ?>
-
-<ul id="filters" class="option-set">
-  <li><a href="" data-filter="*"><?php echo t('All'); ?></a></li>
-  <?php foreach ($rows as $id => $row): ?>
-    <?php print $row; ?>
-  <?php endforeach; ?>
-</ul>
+<section id="options" class="row midtoppadding">
+	<ul id="filters" class="option-set">
+	  <li><a href="" data-filter="*" class="selected"><?php echo t('All'); ?></a></li>
+	  <?php foreach ($rows as $id => $row): ?>
+	    <?php print $row; ?>
+	  <?php endforeach; ?>
+	</ul>
+</section>

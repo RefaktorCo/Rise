@@ -28,7 +28,7 @@
  */
 ?><!-- begin intro-->
 <div class="white">
-<section class="row midtoppadding">
+
 	
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -54,10 +54,12 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
+  <section class="row midtoppadding">
     <!-- begin projects -->
-	<ul class="grid" id="projects">
-    <?php print $rows; ?>
-	</ul>
+	  <ul class="grid" id="projects">
+      <?php print $rows; ?>
+	  </ul>
+  </section>  
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
@@ -89,5 +91,5 @@
       <?php print $feed_icon; ?>
     </div>
   <?php endif; ?>
-</section><?php /* class view */ ?>
+<?php /* class view */ ?>
 </div>

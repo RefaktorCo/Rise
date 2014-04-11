@@ -35,7 +35,6 @@
 
 <hr>
 
-
 <!-- PROJECT DETAILS CONTAINER -->
 <div id="portfolio-detail">
 	<div class="loading-screen">
