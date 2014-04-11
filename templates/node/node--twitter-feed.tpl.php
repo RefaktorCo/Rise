@@ -18,17 +18,18 @@ function buildAuthorizationHeader($oauth) {
   return $r;
 }
 
-function returnTweet(){
-  $oauth_access_token = "778525572-exiQcj6PM2J4G844QbPsWxFC5ldfo4E4TrDQb5RM";
-  $oauth_access_token_secret = "iehLkxwSx3BpnAp8QDomcq8KfCUNbkxWOjeM9t8A";
-  $consumer_key = "ndS4pdToZt0LMpeU64mSrA";
-  $consumer_secret = "g50AP0jqaPFVZAZIWjox7QKhFgTAi54rjjKDUoLSA";
+function returnTweet($token, $token_secret, $key, $key_secret, $handle){
+
+  $oauth_access_token = $token;
+  $oauth_access_token_secret = $token_secret;
+  $consumer_key = $key;
+  $consumer_secret = $key_secret;
 
   $twitter_timeline = "user_timeline";  //  mentions_timeline / user_timeline / home_timeline / retweets_of_me
 
-  //reate request
+  // Create request.
   $request = array(
-  'screen_name' => 'envato',
+  'screen_name' => $handle,
   'count' => '1'
   );
 
@@ -68,16 +69,21 @@ function returnTweet(){
   return json_decode($json, true);
        
 }
-?>
+// Store all the node field data needed to authorize feed.
+$token = strip_tags(render($content['field_twitter_user_token']));
+$token_secret = strip_tags(render($content['field_twitter_user_secret']));
+$key = strip_tags(render($content['field_twitter_consumer_key']));
+$key_secret = strip_tags(render($content['field_twitter_consumer_secret']));
+$handle = strip_tags(render($content['field_twitter_handle']));
 
-<?php 
 
-$mytweet = returnTweet();
+$mytweet = returnTweet($token, $token_secret, $key, $key_secret, $handle);
 $tweettext = $mytweet[0]["text"];
 $mytweettime = $mytweet[0]['created_at'];
 $mytweetcreated = explode(" ", $mytweettime );
 $mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
 
+// Get the links and add the markup.
 $links = preg_match_all('/https?\:\/\/[^\" ]+/i',$tweettext,$link);
 if($link[0]) {
   foreach($link[0] as $url) {
@@ -85,6 +91,7 @@ if($link[0]) {
   }
 }
 
+// Get the hashtags and add the markup.
 $hashtags = preg_match_all('/#\w+/',$tweettext,$hashtag);
 if($hashtag[0]) {
   foreach($hashtag[0] as $tag) {
@@ -92,15 +99,13 @@ if($hashtag[0]) {
   }
 }
 
+// Get the hashtags and add the markup.
 $usernames = preg_match_all('/@\w+/',$tweettext,$username);
 if($username[0]) {
   foreach($username[0] as $name) {
     $tweettext = str_replace($name, "<a href='http://twitter.com/$name'>$name</a>", $tweettext);
   }
 }
-
-
-
 
 ?>
 
@@ -132,4 +137,3 @@ if($username[0]) {
 		</section>
 	</div>
 </div>
-<?php ?>
