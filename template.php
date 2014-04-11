@@ -6,6 +6,8 @@ global $theme_root, $parent_root, $theme_path;
 $theme_root = base_path() . path_to_theme();
 $parent_root = base_path() . drupal_get_path('theme', 'rise');
 
+require_once(drupal_get_path('theme', 'rise').'/includes/twitter.inc');
+
 /**
  * Modify theme_js_alter()
  */
