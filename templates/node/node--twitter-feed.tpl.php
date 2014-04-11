@@ -73,8 +73,9 @@ function returnTweet(){
 
 
 $mytweet = returnTweet();
-
-
+$mytweettime = $mytweet[0]['created_at'];
+$mytweetcreated = explode(" ", $mytweettime );
+$mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
 
 ?>
 
@@ -94,6 +95,7 @@ $mytweet = returnTweet();
 			<div class="main-icon">
 				<i class="icon-twitter"></i>
 			</div>
+			<?php print $mytweetcreatedfinal; ?>
 			<?php print $mytweet[0]["text"]; ?>
 		</div>
 		<!-- link to your twitter profile -->
@@ -101,4 +103,4 @@ $mytweet = returnTweet();
 		</section>
 	</div>
 </div>
-<?php dpm($mytweet); ?>
+<?php dpm($mytweettime); ?>
