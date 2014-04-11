@@ -73,9 +73,20 @@ function returnTweet(){
 
 
 $mytweet = returnTweet();
+$tweettext = $mytweet[0]["text"];
 $mytweettime = $mytweet[0]['created_at'];
 $mytweetcreated = explode(" ", $mytweettime );
 $mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
+
+$hash = preg_match_all('/#\w+/',$mytweet[0]["text"],$matches);
+
+if($matches[0]) {
+  foreach($matches[0] as $hashtag) {
+    $hash = $hashtag;
+  }
+}
+
+$newtweet = str_replace($hash, "<a href='http://twitter.com/$hash'>$hash</a>", $tweettext);
 
 ?>
 
@@ -95,12 +106,16 @@ $mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
 			<div class="main-icon">
 				<i class="icon-twitter"></i>
 			</div>
-			<?php print $mytweetcreatedfinal; ?>
-			<?php print $mytweet[0]["text"]; ?>
+			<div class="tweet_time">
+			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $mytweet[0]["id"]; ?>"><?php print $mytweetcreatedfinal; ?></a>
+			</div>
+			<span class="tweet_text">
+			  <?php print $newtweet; ?>
+			</span>
 		</div>
 		<!-- link to your twitter profile -->
 		<a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>" class="rise-btn light small">Follow me on Twitter!</a>
 		</section>
 	</div>
 </div>
-<?php dpm($mytweettime); ?>
+<?php dpm($newtweet); ?>
