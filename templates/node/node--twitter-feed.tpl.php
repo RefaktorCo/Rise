@@ -78,15 +78,29 @@ $mytweettime = $mytweet[0]['created_at'];
 $mytweetcreated = explode(" ", $mytweettime );
 $mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
 
-$hash = preg_match_all('/#\w+/',$mytweet[0]["text"],$matches);
-
-if($matches[0]) {
-  foreach($matches[0] as $hashtag) {
-    $hash = $hashtag;
+$links = preg_match_all('/https?\:\/\/[^\" ]+/i',$tweettext,$link);
+if($link[0]) {
+  foreach($link[0] as $url) {
+    $tweettext = str_replace($url, "<a href='$url'>$url</a>", $tweettext);
   }
 }
 
-$newtweet = str_replace($hash, "<a href='http://twitter.com/$hash'>$hash</a>", $tweettext);
+$hashtags = preg_match_all('/#\w+/',$tweettext,$hashtag);
+if($hashtag[0]) {
+  foreach($hashtag[0] as $tag) {
+    $tweettext = str_replace($tag, "<a href='http://twitter.com/$tag'>$tag</a>", $tweettext);
+  }
+}
+
+$usernames = preg_match_all('/@\w+/',$tweettext,$username);
+if($username[0]) {
+  foreach($username[0] as $name) {
+    $tweettext = str_replace($name, "<a href='http://twitter.com/'".substr($name,1)."''>$name</a>", $tweettext);
+  }
+}
+
+
+
 
 ?>
 
@@ -110,7 +124,7 @@ $newtweet = str_replace($hash, "<a href='http://twitter.com/$hash'>$hash</a>", $
 			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $mytweet[0]["id"]; ?>"><?php print $mytweetcreatedfinal; ?></a>
 			</div>
 			<span class="tweet_text">
-			  <?php print $newtweet; ?>
+			  <?php print $tweettext; ?>
 			</span>
 		</div>
 		<!-- link to your twitter profile -->
@@ -118,4 +132,4 @@ $newtweet = str_replace($hash, "<a href='http://twitter.com/$hash'>$hash</a>", $
 		</section>
 	</div>
 </div>
-<?php dpm($newtweet); ?>
+<?php ?>
