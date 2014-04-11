@@ -76,34 +76,37 @@ $key = strip_tags(render($content['field_twitter_consumer_key']));
 $key_secret = strip_tags(render($content['field_twitter_consumer_secret']));
 $handle = strip_tags(render($content['field_twitter_handle']));
 
+// Call the returnTweet() function passing field data variables as arguments.
+$tweet_data = returnTweet($token, $token_secret, $key, $key_secret, $handle);
 
-$mytweet = returnTweet($token, $token_secret, $key, $key_secret, $handle);
-$tweettext = $mytweet[0]["text"];
-$mytweettime = $mytweet[0]['created_at'];
-$mytweetcreated = explode(" ", $mytweettime );
-$mytweetcreatedfinal = implode(" ",array_splice($mytweetcreated,0,3));
+// Grab the raw text from the Tweet.
+$tweet_text = $tweet_data[0]["text"];
+
+// Grab the Tweet date/time and trim to just the date.
+$tweet_created = explode(" ", $tweet_data[0]['created_at']);
+$tweet_created_trimmed = implode(" ",array_splice($tweet_created,0,3));
 
 // Get the links and add the markup.
-$links = preg_match_all('/https?\:\/\/[^\" ]+/i',$tweettext,$link);
+$links = preg_match_all('/https?\:\/\/[^\" ]+/i',$tweet_text,$link);
 if($link[0]) {
   foreach($link[0] as $url) {
-    $tweettext = str_replace($url, "<a href='$url'>$url</a>", $tweettext);
+    $tweet_text = str_replace($url, "<a href='$url'>$url</a>", $tweet_text);
   }
 }
 
 // Get the hashtags and add the markup.
-$hashtags = preg_match_all('/#\w+/',$tweettext,$hashtag);
+$hashtags = preg_match_all('/#\w+/',$tweet_text,$hashtag);
 if($hashtag[0]) {
   foreach($hashtag[0] as $tag) {
-    $tweettext = str_replace($tag, "<a href='http://twitter.com/$tag'>$tag</a>", $tweettext);
+    $tweet_text = str_replace($tag, "<a href='http://twitter.com/$tag'>$tag</a>", $tweet_text);
   }
 }
 
 // Get the hashtags and add the markup.
-$usernames = preg_match_all('/@\w+/',$tweettext,$username);
+$usernames = preg_match_all('/@\w+/',$tweet_text,$username);
 if($username[0]) {
   foreach($username[0] as $name) {
-    $tweettext = str_replace($name, "<a href='http://twitter.com/$name'>$name</a>", $tweettext);
+    $tweet_text = str_replace($name, "<a href='http://twitter.com/$name'>$name</a>", $tweet_text);
   }
 }
 
@@ -126,10 +129,10 @@ if($username[0]) {
 				<i class="icon-twitter"></i>
 			</div>
 			<div class="tweet_time">
-			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $mytweet[0]["id"]; ?>"><?php print $mytweetcreatedfinal; ?></a>
+			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $tweet_data[0]["id"]; ?>"><?php print $tweet_created_trimmed; ?></a>
 			</div>
 			<span class="tweet_text">
-			  <?php print $tweettext; ?>
+			  <?php print $tweet_text; ?>
 			</span>
 		</div>
 		<!-- link to your twitter profile -->
