@@ -95,7 +95,7 @@ if($hashtag[0]) {
 $usernames = preg_match_all('/@\w+/',$tweettext,$username);
 if($username[0]) {
   foreach($username[0] as $name) {
-    $tweettext = str_replace($name, "<a href='http://twitter.com/'".substr($name,1)."''>$name</a>", $tweettext);
+    $tweettext = str_replace($name, "<a href='http://twitter.com/$name'>$name</a>", $tweettext);
   }
 }
 
