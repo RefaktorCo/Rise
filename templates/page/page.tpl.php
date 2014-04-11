@@ -27,10 +27,10 @@
 </header>
 <!-- end header -->
 
-<?php print $messages; ?>
+
 
 <?php print render($page['content']); ?>
-
+<?php print $messages; ?>
 <footer>
 	<section class="row heading">
 			</section>
