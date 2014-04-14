@@ -29,4 +29,5 @@ regions[content] = Content
 regions[front_content] = Front Page Content
 regions[sidebar_primary] = Sidebar Primary
 regions[sidebar_secondary] = Sidebar Secondary
+regions[footer] = Footer
 

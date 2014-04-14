@@ -34,8 +34,7 @@
 <?php print render($page['front_content']); ?>
 
 <footer>
-	<section class="row heading">
-			</section>
+	<?php print render($page['footer']); ?>
 </footer>
 
 

@@ -49,6 +49,6 @@
 <?php print render($items[0]); ?>
 <?php } else { ?> 
 <?php foreach ($items as $delta => $item): ?>
-  <div class="two columns"><?php print $item_attributes[$delta]; ?><?php print render($item); ?></div>
+  <div class="two columns"><?php print render($item); ?></div>
 <?php endforeach; ?>
 <?php } ?> 

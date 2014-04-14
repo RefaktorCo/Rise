@@ -12,6 +12,13 @@ jQuery(document).ready(function ($) {
 		
 	});
 	
+	/* testimonial initialize
+	=========================*/
+	$('.testimonials').flexslider({
+		animation: "slide",
+		slideshow: false
+	});
+	
 	$('.flexslider').flexslider({
     animationLoop: true,
     pauseOnAction: true,
@@ -105,12 +112,7 @@ Gumby.ready(function() {
 	
 	
 	
-	/* testimonial initialize
-	=========================*/
-	$('.testimonials').flexslider({
-		animation: "slide",
-		slideshow: false
-	});
+	
 
 
 	

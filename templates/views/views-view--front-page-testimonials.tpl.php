@@ -28,16 +28,16 @@
  */
 ?><!-- begin intro-->
 
-<div class="<?php print $classes; ?>">
+<div id="testimonial" class="<?php print $classes; ?> bigtoppadding">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
-    <div class="view-header">
+
       <?php print $header; ?>
-    </div>
+  
   <?php endif; ?>
 
   <?php if ($exposed): ?>
@@ -53,7 +53,13 @@
   <?php endif; ?>
 
   <?php if ($rows): ?>
+    <section class="row">
+	<div class="seven columns centered">
+		<!-- begin testimonial flexslider -->
+		<div class="testimonials">
+			<ul class="slides">
     <?php print $rows; ?>
+			</ul></div></div></section>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>
