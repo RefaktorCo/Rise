@@ -33,7 +33,11 @@
 
 <?php print render($page['front_content']); ?>
 
-<hr>
+<footer>
+	<section class="row heading">
+			</section>
+</footer>
+
 
 <!-- PROJECT DETAILS CONTAINER -->
 <div id="portfolio-detail">
@@ -72,6 +76,7 @@
 	</div>
 	<!-- end ajax section -->
 </div>
+
 <!-- end portfolio detail -->
 <!-- loader -->
 <script type="text/javascript">
