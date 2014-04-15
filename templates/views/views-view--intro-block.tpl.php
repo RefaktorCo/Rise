@@ -28,7 +28,7 @@
  */
 ?><!-- begin intro-->
 
-<div id="intro" class="<?php print $classes; ?> tint">
+<div id="intro" class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>

@@ -18,6 +18,7 @@ scripts[] = js/plugins.js
 scripts[] = js/main.js
 scripts[] = js/matchMedia.js
 scripts[] = js/ajax.js
+scripts[] = js/jquery.tubular.1.0.js
 
 ; Define theme regions.
 

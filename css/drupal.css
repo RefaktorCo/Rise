@@ -14,14 +14,40 @@ ul.navigation.active {top: -18px !important;}
 	height: 100%;
 }
 
-#comments input {
+#comments input, #contact input{
 	background: #eee;
   color: #1e1e1e;
   height: 56px;
   border: 0px;
   font-weight: 400;
   font-size: 18px;
+  position: relative;
+  padding: 0 10px;
+  -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -ms-border-radius: 4px;
+ -o-border-radius: 4px;
+ border-radius: 4px;
+ max-width: 100%;
 }
+
+#contact textarea {
+	background: #eee;
+  color: #1e1e1e;
+
+  border: 0px;
+  font-weight: 400;
+  font-size: 18px;
+  position: relative;
+  padding: 0 10px;
+  -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -ms-border-radius: 4px;
+ -o-border-radius: 4px;
+ border-radius: 4px;
+ max-width: 100%;
+}
+
 
 .tweet_time {
 	display: block;
