@@ -27,7 +27,7 @@
  * @ingroup views_templates
  */
 ?><!-- begin intro-->
-<div id="clients" class="clients-image <?php print $classes; ?>" data-stellar-background-ratio="0.5">
+<div id="clients" class="clients-image <?php print $classes; ?> show" data-stellar-background-ratio="0.5">
 	<div class="tint largepadding">
 
 	  <?php print render($title_prefix); ?>
