@@ -11,7 +11,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function ($) {
 
-var options = { videoId: 'JXOXns_gx8k', start: 12 };
+var options = { videoId: "<?php print strip_tags(render($content['field_intro_video_background']));?>", start: 12 };
 	$('#intro').tubular(options);		    });
   
 </script>

@@ -12,6 +12,27 @@
 	background-size: cover !important;
 }
 
+.down-arrow{
+  color:#222;
+  background:#ffffff;
+}
+
+.down-arrow a{
+  color:#222;
+}
+
+.down-arrow:hover{
+  background:none;
+  border:2px solid #ffffff;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+}
+
+.down-arrow:hover a{
+  color:#ffffff !important;
+}
 
 header {z-index: 100;}
 .navbar {background: none;}
