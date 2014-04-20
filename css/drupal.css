@@ -2,6 +2,10 @@
 	position: absolute !important;
 }
 
+.dots {
+	clear: both;
+}
+
 .parallax {
   background-repeat: no-repeat;
 	background-position: center center;

@@ -10,10 +10,11 @@
 	<div class="tint largepadding">
 		<!-- section heading -->
 		<section class="row heading">
+		<?php print render($content['field_image']); ?>
 		<h1><?php print $title; ?></h1>
 		</section>
 		
-		<section class="row dots">
+		<section class="row heading">
       <?php print render($content['body']); ?>
 		</section>
 	</div>

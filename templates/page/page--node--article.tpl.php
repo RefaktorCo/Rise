@@ -25,17 +25,6 @@
 </div>
 
 </header>
-<!-- begin blog-->
-	<div id="blog">
-		<div class="tint largepadding">
-			<section class="row heading bigtoppadding">
-			<!-- blog heading -->
-			<h1>MY BLOG</h1>
-			<h5 class="eight columns centered">Lorem ipsum dolor sit amet, alienum salutandi evertitur pri te. In fierent concludaturque eos.</h5>
-			</section>
-			<div class="row dots">
-			</div>
-		</div>
 <!-- end header -->
 <?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
 <!-- blog menu -->
@@ -53,7 +42,7 @@
 </div>
 <!-- end blog menu -->
 <?php endif; ?>
-
+<?php print render($page['before_content']); ?>
 <?php print $messages; ?>
 <div class="grey">
   <?php print render($page['content']); ?>
