@@ -19,9 +19,7 @@
 			<a class="white-text"><i class="icon-reorder"></i></a>
 		</div>
 		
-		<!-- link to your section ids -->
-		<!-- we use href attribute for li active class to work on different sections.
-		   we use gumby-goto for easing scroll to target sections -->
+		
 		<?php print render($page['site_navigation']); ?>
 	</div>
 </div>
@@ -29,10 +27,10 @@
 </header>
 <!-- end header -->
 
-<?php print $messages; ?>
+
 
 <?php print render($page['front_content']); ?>
-
+<?php print $messages; ?>
 <footer>
 	<?php print render($page['footer']); ?>
 </footer>

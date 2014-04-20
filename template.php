@@ -73,38 +73,12 @@ function rise_preprocess_username(&$vars) {
   }
 }
 
-/**
- * Overrides theme_menu_link().
- */
-function rise_menu_link(array $variables) {
-  //unset all the classes
-  unset($variables['element']['#attributes']['class']);
-  $element = $variables['element'];
-  $sub_menu = '';
-  
-  if($variables['element']['#attributes']) {
-    $sub_menu = '';
-  }
-
-  if ($element['#below']) {
-    $sub_menu = drupal_render($element['#below']);
-  }
-  
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  
-  // if link class is active, make li class as active too
-  if(strpos($output,"active")>0){
-    $element['#attributes']['class'][] = "current-menu-item";
-  }
-  
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
 
 /**
  * Overrides theme_menu_tree().
  */
 function rise_menu_tree(&$variables) {
-  return '<ul>' . $variables['tree'] . '</ul>';
+  return '<ul class="navigation">' . $variables['tree'] . '</ul>';
 }
 
 /**
