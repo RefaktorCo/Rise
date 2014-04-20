@@ -77,9 +77,22 @@ function rise_preprocess_username(&$vars) {
 /**
  * Overrides theme_menu_tree().
  */
-function rise_menu_tree(&$variables) {
+function rise_menu_tree__site_navigation(&$variables) {
   return '<ul class="navigation">' . $variables['tree'] . '</ul>';
 }
+
+
+/**
+ * Implements hook_block_view_alter() for "Site Navigation" region.
+ */
+function rise_block_view_alter(&$data, $block) {
+
+  if ( ($block->region == 'site_navigation') && ($data['subject'] != 'Rise Menu')) {
+    $data['content']['#theme_wrappers'] = array('menu_tree__site_navigation');
+  }
+  
+}
+
 
 /**
  * Overrides theme_menu_local_tasks().
