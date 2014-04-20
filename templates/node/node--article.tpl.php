@@ -20,19 +20,21 @@
 			<div class="clear">
 			</div>
 			<?php
-    // Remove the "Add new comment" link on the teaser page or if the comment
-    // form is being displayed on the same page.
-    if ($teaser || !empty($content['comments']['comment_form'])) {
-      unset($content['links']['comment']['#links']['comment-add']);
-    }
-    // Only display the wrapper div if there are links.
-    $links = render($content['links']);
-    if ($links):
-  ?>
-    <div class="link-wrapper">
-      <?php print $links; ?>
-    </div>
-  <?php endif; ?>
+		    // Remove the "Add new comment" link on the teaser page or if the comment
+		    // form is being displayed on the same page.
+		    if ($teaser || !empty($content['comments']['comment_form'])) {
+		      unset($content['links']['comment']['#links']['comment-add']);
+		    }
+		    // Only display the wrapper div if there are links.
+		    $links = render($content['links']);
+		    if ($links):
+		  ?>
+		    <div class="link-wrapper">
+		      <?php hide($content['links']); ?>
+		      <a href="<?php print $node_url; ?>" class="rise-btn dark small pull_right"><i class="icon-chevron-right"></i> &nbsp;<?php print t('read more'); ?></a>
+		    </div>
+		  <?php endif; ?>
+		  <div class="clear"></div>
 		</div>
   </div>
 </section>
