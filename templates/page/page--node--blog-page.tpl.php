@@ -50,8 +50,9 @@
 <div class="grey">
   <?php print render($page['content']); ?>
 </div>
-<footer>
-	<section class="row heading">
-	</section>
-</footer>
 
+<?php if (render($page['footer'])): ?>
+<footer>
+  <?php print render($page['footer']); ?>
+</footer>
+<?php endif; ?>

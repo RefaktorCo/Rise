@@ -27,14 +27,14 @@
 </header>
 <!-- end header -->
 
-
-
-<?php print render($page['front_content']); ?>
 <?php print $messages; ?>
-<footer>
-	<?php print render($page['footer']); ?>
-</footer>
+<?php print render($page['front_content']); ?>
 
+<?php if (render($page['footer'])): ?>
+<footer>
+  <?php print render($page['footer']); ?>
+</footer>
+<?php endif; ?>
 
 <!-- PROJECT DETAILS CONTAINER -->
 <div id="portfolio-detail">

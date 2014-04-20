@@ -32,8 +32,9 @@
 		<div class="white">
 <?php print render($page['content']); ?>
 		</div></div>
+		
+<?php if (render($page['footer'])): ?>
 <footer>
-	<section class="row heading">
-			</section>
+  <?php print render($page['footer']); ?>
 </footer>
-
+<?php endif; ?>
