@@ -40,8 +40,9 @@
     <?php print render($action_links); ?>
   </ul>
 <?php endif; ?>
-</section>
+
 <?php print render($page['content']); ?>
+</section>
 </div>
 <footer>
 	<section class="row heading">
