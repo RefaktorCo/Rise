@@ -29,6 +29,9 @@
 	<div id="blog">
 		
 <!-- end header -->
+
+<?php print render($page['before_content']); ?>
+
 <?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
 <!-- blog menu -->
 <div class="blog-menu">
@@ -45,7 +48,7 @@
 </div>
 <!-- end blog menu -->
 <?php endif; ?>
-<?php print render($page['before_content']); ?>
+
 <?php print $messages; ?>
 <div class="grey">
   <?php print render($page['content']); ?>

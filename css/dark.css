@@ -52,3 +52,22 @@ body .grey {
   color: rgb(150,150,150);
   background:#222;
 }
+
+.blog-post {
+  background: none;
+  padding: 20px 0px;
+  height: auto;
+  clear: both;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #2C2C2C;
+}
+
+#blog .grey {
+  border-top: none;
+  border-bottom: none;
+}
+
+.blog-menu {
+  background: #2d2d2d;
+}
