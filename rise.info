@@ -9,6 +9,7 @@ stylesheets[all][] = css/gumby.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/mobile.css
 stylesheets[all][] = css/drupal.css
+stylesheets[all][] = css/dark.css
 
 ; Define theme JS.
 scripts[] = js/libs/modernizr-2.6.2.min.js

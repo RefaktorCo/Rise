@@ -1,3 +1,54 @@
 header {
   background: #161616;
 }
+
+body .grey {
+  color: #4E4F53;
+}
+
+.grey {
+  background: #222;
+}
+
+.white {
+  background: #1d1d1d;
+}
+
+.white h1, .white h2,.white h3,.white h4,.white h5,.white h6,
+.grey h1,.grey h2,.grey h3,.grey h4,.grey h5,.grey h6{
+  color:#fff;
+}
+
+.service h5 {
+  color: #bbb;
+}
+
+.dark.rise-btn {
+  background: #333;
+  color: #fff;
+  border: 2px solid #333;
+}
+
+.dark.rise-btn:hover{
+  border:2px solid #ff4242;
+  color:#fff;
+  background:#ff4242;
+}
+
+.dark.rise-btn.outline{
+  background:none;
+  border:2px solid #444;
+  color:#444;
+}
+
+.dark.rise-btn.outline:hover{
+  background:#222;
+  border:2px solid #d7d7d7;
+  color:#fff;
+}
+
+.white ul#filters li a {
+  background: none;
+  color: rgb(150,150,150);
+  background:#222;
+}
