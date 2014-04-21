@@ -25,35 +25,36 @@
 </div>
 
 </header>
-<!-- begin blog-->
-	<div id="blog">
-		
 <!-- end header -->
-
 <?php print render($page['before_content']); ?>
 
-<?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
-<!-- blog menu -->
-<div class="blog-menu">
-	<section class="row">
-	<!-- blog categories -->
-	<div class="eight columns">
-		<?php print render($page['blog_menu_left']); ?>
+<!-- begin blog-->
+<div id="blog">
+	<?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
+	<!-- blog menu -->
+	<div class="blog-menu">
+		<section class="row">
+		<!-- blog categories -->
+		<div class="eight columns">
+			<?php print render($page['blog_menu_left']); ?>
+		</div>
+		<!-- blog search -->
+		<div class="four columns">
+			<?php print render($page['blog_menu_right']); ?>
+		</div>
+		</section>
 	</div>
-	<!-- blog search -->
-	<div class="four columns">
-		<?php print render($page['blog_menu_right']); ?>
-	</div>
-	</section>
-</div>
-<!-- end blog menu -->
-<?php endif; ?>
+	<!-- end blog menu -->
+	<?php endif; ?>
 
-<?php print $messages; ?>
-<div class="grey">
-  <?php print render($page['content']); ?>
+	<?php print $messages; ?>
+  <div class="grey">
+     <section class="row">		
+	      <?php print render($page['content']); ?>
+		 </section>
+  </div>
+  
 </div>
-
 <?php if (render($page['footer'])): ?>
 <footer>
   <?php print render($page['footer']); ?>

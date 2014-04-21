@@ -4,6 +4,9 @@
 		<div class="blog-post">
 			<!-- post image -->
 			<?php print render($content['field_image']); ?>
+			
+			<!-- Before Title -->
+			<?php print render($content['field_before_title']); ?>
 			<!--post info -->
 			<div class="post-info">
 				<!-- post title -->
