@@ -1,3 +1,7 @@
+html, body {
+	height: auto !important;
+}
+
 #tubular-container {
 	position: absolute !important;
 }
@@ -6,7 +10,7 @@
 	padding-top:30px;
 }
 
-.tabs { margin: 0; padding: 0; border-bottom: 1px solid #e5e5e5; }
+.tabs { margin: 0 !important; padding-left: 0 !important; border-bottom: 1px solid #e5e5e5; }
 .tabs > li { display: inline-block !important; width: auto; padding: 0; margin: 0 .5% 0 0; cursor: default; top: 1px; }
 .tabs > li > li { display: inline-block; width: auto; padding: 0; margin: 0 1.7094% 0 0; cursor: default; top: 1px; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; }
 .tabs > li > li > a { display: block; width: auto; padding: 0 16px; margin: 0; color: #424242; font-weight: 600; border: 1px solid #e5e5e5; border-width: 1px 1px 0 1px; text-shadow: 0 1px 1px white; background: #f2f2f2; cursor: pointer; -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; -ms-border-radius: 4px 4px 0 0; -o-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; height: 42px; line-height: 40px; }
