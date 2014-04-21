@@ -26,7 +26,8 @@
 
 </header>
 <!-- end header -->
-<div class="header-clear"></div>
+<div class="white">
+<section class="row">
 <?php print $messages; ?>
 <?php if ($tabs = render($tabs)): ?>
   <div id="drupal_tabs" class="tabs ">
@@ -39,9 +40,9 @@
     <?php print render($action_links); ?>
   </ul>
 <?php endif; ?>
-
+</section>
 <?php print render($page['content']); ?>
-
+</div>
 <footer>
 	<section class="row heading">
 			</section>
