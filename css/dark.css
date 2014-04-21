@@ -71,3 +71,9 @@ body .grey {
 .blog-menu {
   background: #2d2d2d;
 }
+
+.blog-menu .search.input {
+background: #242424;
+
+color: #fff;
+}
