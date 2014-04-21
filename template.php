@@ -73,7 +73,7 @@ function rise_form_alter(&$form, &$form_state, $form_id) {
     
     // Alternative (HTML5) placeholder attribute instead of using the javascript
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
-    dpm($form);
+
   }
 } 
 
