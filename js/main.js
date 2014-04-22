@@ -42,27 +42,6 @@ jQuery(document).ready(function ($) {
 	  e.preventDefault();
 	});
   
-  /* gif animations
-	=========================*/
-	var animations = {
-
-	  init: function(){
-		// Service Gifs
-		$('.service').on('mouseenter', function(e){
-		  var el = $(this).find('.gif-icon');
-		  var src = el.attr('src');
-		  el.attr('src', src.replace('.gif', '_anim.gif'));
-		});
-
-		$('.service').on('mouseleave', function(e){
-		  var el = $(this).find('.gif-icon');
-		  var src = el.attr('src');
-		  el.attr('src', src.replace('_anim.gif', '.gif'));
-		});
-	  }
-	}
-	animations.init();
-	
 	/* stat counter
 	=========================*/
 	if (matchMedia('only screen and (min-width: 769px)').matches) {
@@ -185,31 +164,43 @@ $('.modal .switch').on(Gumby.click, function() {
 
 });
 
-
 /* Navigation
 ======================== */
-
-$(window).load(function(){
+jQuery(window).load(function(){
+        
+  jQuery('.navigation a[href^="#"], a.target').click(function(){
+  
+  	var thisHref = jQuery(this).attr('href');
+  	var outerHeight = jQuery('header').outerHeight() - 20;
+  	var offsetTop = jQuery(thisHref).offset().top - outerHeight;
+  	
+  	jQuery('html, body').stop().animate({ 
+  		  scrollTop: offsetTop
+  	}, 800, 'easeOutExpo');
+  	
+  	return false;
+  });
+  
 // Cache selectors
 var lastId,
-    topMenu = $(".navigation"),
+    topMenu = jQuery(".navigation"),
     topMenuHeight = topMenu.outerHeight()+15,
     // All list items
-    menuItems = topMenu.find("a"),
+    menuItems = topMenu.find('a[href^="#"]'),
     // Anchors corresponding to menu items
     scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
+      var item = jQuery(jQuery(this).attr("href"));
       if (item.length) { return item; }
     });
 
 // Bind to scroll
-$(window).scroll(function(){
+jQuery(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+   var fromTop = jQuery(this).scrollTop()+topMenuHeight;
    
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
+     if (jQuery(this).offset().top < fromTop)
        return this;
    });
    // Get the id of the current element
@@ -224,6 +215,7 @@ $(window).scroll(function(){
          .end().filter("[href=#"+id+"]").parent().addClass("active");
    }                   
 });
+
 
 
 /* portfolio filters

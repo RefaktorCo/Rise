@@ -12,6 +12,7 @@ stylesheets[all][] = css/drupal.css
 stylesheets[all][] = css/dark.css
 
 ; Define theme JS.
+scripts[] = js/jquery-migrate-1.2.1.min.js
 scripts[] = js/libs/modernizr-2.6.2.min.js
 scripts[] = js/libs/gumby.min.js
 scripts[] = js/jquery.browser.min.js

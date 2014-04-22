@@ -1,9 +1,8 @@
 <!-- service -->
 <div class="four columns service">
-  <?php if (render($content['field_skills_image'])): ?>
+  <?php if (render($content['field_skills_icon'])): ?>
 	<div class="icon">
-		<!-- you can replace below gif image with fontawesome icon -->
-		<img src="<?php echo file_create_url($node->field_skills_image['und'][0]['uri']); ?>" class="gif-icon" alt="iconnn"/>
+		<?php print render($content['field_skills_icon']); ?>
 	</div>
 	<?php endif; ?>	
 	<!-- service info -->
