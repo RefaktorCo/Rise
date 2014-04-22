@@ -5,8 +5,6 @@
  */
 function rise_form_system_theme_settings_alter(&$form, &$form_state) {
 
-
-  
   // Main settings wrapper
   $form['options'] = array(
     '#type' => 'vertical_tabs',
@@ -51,7 +49,19 @@ function rise_form_system_theme_settings_alter(&$form, &$form_state) {
       '#title' => t('Header Search'),
       '#default_value' => theme_get_setting('header_search'),
     );
-
+    
+  // CSS
+  $form['options']['css'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('CSS'),
+  );
+  
+    // User CSS
+    $form['options']['css']['user_css'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Add your own CSS'),
+      '#default_value' => theme_get_setting('user_css'),
+    );  
 		
 	}
 ?>

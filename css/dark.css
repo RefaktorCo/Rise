@@ -94,3 +94,7 @@ body .grey {
 #comments .message, .comment-form .message {
   background: #1d1d1d;
 }
+
+.blog-categories li a {
+  color: #c0c0c0;
+}

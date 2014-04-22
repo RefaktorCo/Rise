@@ -11,6 +11,23 @@
 	padding-top:30px;
 }
 
+#block-search-form input {
+	width: 100%;
+	outline: none;
+}
+
+#block-search-form form {
+	margin-bottom: 10px;
+}
+
+#block-search-form input[type="submit"] {
+	display: none;
+}
+
+.blog-categories ul {
+	margin-bottom: 0px;
+}
+
 .tabs { margin: 0 !important; padding-left: 0 !important; border-bottom: 1px solid #e5e5e5; }
 .tabs > li { display: inline-block !important; width: auto; padding: 0; margin: 0 .5% 0 0; cursor: default; top: 1px; }
 .tabs > li > li { display: inline-block; width: auto; padding: 0; margin: 0 1.7094% 0 0; cursor: default; top: 1px; -webkit-box-shadow: 0 1px 0 white; -moz-box-shadow: 0 1px 0 white; box-shadow: 0 1px 0 white; }
