@@ -109,7 +109,11 @@ ul.navigation.active {top: -18px !important;}
 	height: 100%;
 }
 
-#comments input, #contact input{
+#comments .form-required, .comment-form .form-required {
+  display: none;
+}
+
+#comments input, #contact input, .comment-form input{
 	background: #eee;
   color: #1e1e1e;
   height: 56px;
@@ -126,10 +130,13 @@ ul.navigation.active {top: -18px !important;}
  max-width: 100%;
 }
 
-#contact textarea {
+#comments input[type="text"], .comment-form input[type="text"], #contact input[type="text"]{
+  width: 100%;
+}
+
+#comments textarea, .comment-form textarea,  #contact textarea {
 	background: #eee;
   color: #1e1e1e;
-
   border: 0px;
   font-weight: 400;
   font-size: 18px;

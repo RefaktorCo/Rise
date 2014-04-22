@@ -196,36 +196,29 @@ function rise_item_list($vars) {
   return theme_item_list($vars);
 }
 
-
 /**
 * Implements hook_form_comment_form_alter().
 */
-function rise_form_comment_form_alter(&$form, &$form_state, $form_id) {
-  global $user;
-  
-  if (!$user->uid) {
-  $form['author']['name'] = array(
-	  '#type' => 'textfield',
-	  '#maxlength' => 255,
-	  '#attributes' =>array('placeholder' => t('name')),
-	  '#required' => TRUE,
-	);
-	}
-	
-	$form['subject'] = array(
-	  '#type' => 'textfield',
-	  '#maxlength' => 255,
-	  '#attributes' =>array('placeholder' => t('subject')),
-	  '#required' => TRUE,
-	);
-	
-	$form['comment_body'] = array(
-	  '#type' => 'textarea',
-	  '#maxlength' => 255,
-	  '#attributes' =>array('placeholder' => t('comment')),
-	  '#required' => TRUE,
-	);
+function comment_form_comment_form_alter(&$form, &$form_state) {
 
+   /* Remove field title and add placeholder for "Author" field */
+	$form['author']['name']['#attributes']['placeholder'] = t( 'name' );
+  $form['author']['name']['#title'] = FALSE;
+	
+  /* Remove the "your name" elements for authenticated users */
+  if ($form['is_anonymous']['#value'] == false) {
+    $form['author']['#access'] = FALSE; 
+  }
+  
+  /* Remove field title and add placeholder for "Subject" field */
+	$form['subject']['#attributes']['placeholder'] = t( 'subject' );
+	$form['subject']['#title'] = FALSE;
+	$form['subject']['#required'] = FALSE;
+	
+	/* Remove field title and add placeholder for "Comment Body" field */
+	$form['comment_body'][LANGUAGE_NONE][0]['#attributes']['placeholder'] = t( 'message' );
+	$form['comment_body']['und'][0]['#title'] = FALSE;
+	
 }
 
 function rise_textfield($variables) {
