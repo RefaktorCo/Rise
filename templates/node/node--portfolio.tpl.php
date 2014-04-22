@@ -4,11 +4,8 @@
 		<!-- project index and specs -->
 		<div class="bigbottompadding">
 			<ul class="project-spec">
-				<li class="index">PROJECT 1</li>
-				<li>BRANDING</li>
-				<li>DESIGN</li>
-				<li>DEVELOPMENT</li>
-				<li>PHOTOGRAPHY</li>
+				<li class="index"><?php print t('CATEGORY:'); ?></li>
+				<?php print render($content['field_portfolio_category']); ?>
 			</ul>
 		</div>
 		<!-- project title -->
