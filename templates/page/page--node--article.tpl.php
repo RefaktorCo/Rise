@@ -25,6 +25,8 @@
 </div>
 
 </header>
+<?php print render($page['before_content']); ?>
+
 <!-- end header -->
 <?php if ((render($page['blog_menu_left'])) OR (render($page['blog_menu_right']))): ?>
 <!-- blog menu -->
@@ -42,11 +44,14 @@
 </div>
 <!-- end blog menu -->
 <?php endif; ?>
-<?php print render($page['before_content']); ?>
-<?php print $messages; ?>
-<div class="grey">
+
+
+<div id="blog" class="grey">
+  <?php print $messages; ?>
   <?php print render($page['content']); ?>
 </div>
+
+<?php print render($page['after_content']); ?>
 
 <?php if (render($page['footer'])): ?>
 <footer>

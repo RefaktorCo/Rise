@@ -30,6 +30,9 @@
 <?php print $messages; ?>
 <?php print render($page['front_content']); ?>
 
+
+<?php print render($page['after_content']); ?>
+
 <?php if (render($page['footer'])): ?>
 <footer>
   <?php print render($page['footer']); ?>

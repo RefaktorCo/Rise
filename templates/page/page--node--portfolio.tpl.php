@@ -32,6 +32,8 @@
 		<div class="white">
 <?php print render($page['content']); ?>
 		</div></div>
+
+<?php print render($page['after_content']); ?>
 		
 <?php if (render($page['footer'])): ?>
 <footer>

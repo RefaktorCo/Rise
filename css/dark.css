@@ -63,6 +63,10 @@ body .grey {
   border-bottom: 1px solid #2C2C2C;
 }
 
+.article-title a {
+	color: #fff;
+}
+
 #blog .grey {
   border-top: none;
   border-bottom: none;
@@ -87,6 +91,6 @@ body .grey {
   color: #fff;
 }
 
-.message {
+#comments .message, .comment-form .message {
   background: #1d1d1d;
 }

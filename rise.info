@@ -28,6 +28,7 @@ regions[blog_menu_left] = Blog Menu Left
 regions[blog_menu_right] = Blog Menu Right
 regions[before_content] = Before Content
 regions[content] = Content
+regions[after_content] = After Content
 regions[front_content] = Front Page Content
 regions[sidebar_primary] = Sidebar Primary
 regions[sidebar_secondary] = Sidebar Secondary
