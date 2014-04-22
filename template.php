@@ -312,6 +312,19 @@ function rise_field($variables) {
 }
 
 /**
+*  Unset color stylesheet depending on theme settings.
+*/
+function rise_css_alter(&$css) {
+ 
+ if (theme_get_setting('color_scheme') == "light") {
+   global $parent_root;
+   unset($css[drupal_get_path('theme', 'rise') . '/css/dark.css']);
+ }
+ 
+}
+
+
+/**
  * Theme node pagination function().
  */
 function rise_node_pagination($node, $mode = 'n') {

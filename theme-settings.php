@@ -43,11 +43,42 @@ function rise_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('General'),
   );
                 
-    // Sticky Header
-    $form['options']['general']['header_search'] = array(
+    // Color Schemes
+    $form['options']['general']['color_scheme'] = array(
+      '#type' => 'select',
+      '#title' => t('Color Scheme'),
+      '#options' => array (
+        'light' => t('Light'),
+        'dark' => t('Dark')
+      ),
+      '#default_value' => theme_get_setting('color_scheme'),
+    );
+  
+  // Post Meta
+  $form['options']['meta'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Post Meta'),
+  );
+                
+    // Meta Date
+    $form['options']['meta']['meta_date'] = array(
       '#type' => 'checkbox',
-      '#title' => t('Header Search'),
-      '#default_value' => theme_get_setting('header_search'),
+      '#title' => t('Meta Date'),
+      '#default_value' => theme_get_setting('meta_date'),
+    );
+    
+    // Meta Author
+    $form['options']['meta']['meta_author'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Meta Author'),
+      '#default_value' => theme_get_setting('meta_author'),
+    );   
+    
+    // Meta Date
+    $form['options']['meta']['meta_tags'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Meta Tags'),
+      '#default_value' => theme_get_setting('meta_tags'),
     );
     
   // CSS

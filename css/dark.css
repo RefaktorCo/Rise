@@ -98,3 +98,19 @@ body .grey {
 .blog-categories li a {
   color: #c0c0c0;
 }
+
+.pagination ul li {
+	background: #333;
+}
+
+.pagination ul li a{
+	color:#555;
+}
+
+.pagination ul li:hover{
+	background:#2d2d2d;
+}
+
+.pagination ul li.active {
+	color: #444;
+}
