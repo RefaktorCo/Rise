@@ -1,4 +1,5 @@
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <div class="user">
   <?php 
     global $parent_root;
       if (!$picture) {
@@ -8,13 +9,13 @@
         print $picture;   
       }
     ?>
-
+  </div>
   <?php if ($new): ?>
     <span class="new"><?php print $new ?></span>
   <?php endif; ?>
   
   
-  <div class="comment-content"> 
+  <div class="message comment-content"> 
 	  <?php print render($title_prefix); ?>
 	  <h6 class="margin-bottom-10" <?php print $title_attributes; ?>><?php print $author; ?> <span class="meta"> •  <?php echo t('Posted');?> <?php print format_date($comment->created, 'custom', 'M d, Y'); ?></span> <span class="comment-permalink"><?php print $permalink; ?></span></h6> 
 	  <?php print render($title_suffix); ?>
@@ -36,6 +37,6 @@
 	  </div>
 	
 	  <?php print render($content['links']) ?> 
-	  <hr>
+	
   </div>
 </div>

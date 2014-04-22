@@ -57,8 +57,11 @@
 </section>
 <?php endif; ?>  
 <!-- end blog grey -->
+<?php if (render($content['comments'])): ?>
 <section class="row">
   <div class="ten columns centered">
+    <h3 class="bold"><?php print $comment_count; ?> <?php print t('Comments'); ?></h3>
     <?php print render($content['comments']); ?>
   </div>
 </section>
+<?php endif; ?>
