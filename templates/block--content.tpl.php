@@ -45,7 +45,4 @@
  */
 ?>
 
-
 <?php print $content ?>
-  
-

@@ -1,4 +1,11 @@
+<?php if (theme_get_setting('loader') == 1): ?>
 <!-- Preloader -->
+<div id="preloader">
+	<div id="status">
+		&nbsp;
+	</div>
+</div>
+<?php endif; ?>
 
 <!-- header -->
 <header>

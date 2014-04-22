@@ -1,5 +1,6 @@
 <div id="contact">
 	<div class="white">
+	
 		<!-- section heading -->
 		<section class="row heading">
 		  <h3><?php print $title; ?></h3>

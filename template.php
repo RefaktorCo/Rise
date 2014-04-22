@@ -54,7 +54,6 @@ function rise_preprocess_page(&$vars, $hook) {
     $vars['theme_hook_suggestions'][] = 'page--taxonomy--vocabulary--' . $term->vid;
   }
   
-  
 }
 
 /**
@@ -323,7 +322,6 @@ function rise_css_alter(&$css) {
  
 }
 
-
 /**
  * Theme node pagination function().
  */
@@ -354,7 +352,6 @@ function rise_node_pagination($node, $mode = 'n') {
   
   return current($nids);
 }
-
 
 /**
  * User CSS function. Separate from rise_preprocess_html so function can be called directly before </head> tag.

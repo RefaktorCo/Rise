@@ -6,13 +6,10 @@
 }
 </style>
 
-
-
-		<section class="row heading">
-			<h2 class="s-bold"><?php print $title; ?></h2>
-			<!-- client images row -->
-			<div class="ten columns centered clients">
-				<?php print render($content['field_client_images']); ?>	
-			</div>
-		</section>
-		
+<section class="row heading">
+	<h2 class="s-bold"><?php print $title; ?></h2>
+	<!-- client images row -->
+	<div class="ten columns centered clients">
+		<?php print render($content['field_client_images']); ?>	
+	</div>
+</section>

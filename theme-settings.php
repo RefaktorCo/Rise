@@ -53,6 +53,13 @@ function rise_form_system_theme_settings_alter(&$form, &$form_state) {
       ),
       '#default_value' => theme_get_setting('color_scheme'),
     );
+    
+    // Loader
+    $form['options']['general']['loader'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Loader'),
+      '#default_value' => theme_get_setting('loader'),
+    );
   
   // Post Meta
   $form['options']['meta'] = array(

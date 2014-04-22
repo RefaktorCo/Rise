@@ -1,5 +1,4 @@
-<!-- everything inside ajaxpage
-is displayed in portfolio -->
+
 
 		<section class="row heading left-text">
 		<!-- project index and specs -->
@@ -30,7 +29,6 @@ is displayed in portfolio -->
 		</div>
 		</section>
 
-<!-- end ajaxpage -->
 
-<div class="clear">
-</div>
+
+<div class="clear"></div>

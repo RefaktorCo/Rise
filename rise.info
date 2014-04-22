@@ -37,6 +37,7 @@ regions[footer] = Footer
 ; Define theme setting defaults.
 
 settings[color_scheme] = light
+settings[loader] = 1
 
 settings[meta_date] = 1
 settings[meta_author] = 1

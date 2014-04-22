@@ -23,11 +23,11 @@ not-ie" lang="<?php print $language->language; ?>" dir="<?php print $language->d
 <![endif]-->
 
 <!-- abril font -->
-<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 <!-- san font -->
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic,600italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic,600italic' rel='stylesheet' type='text/css'>
 <!-- serif font -->
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 
 <?php rise_user_css(); ?>  
 
