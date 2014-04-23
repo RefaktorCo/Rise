@@ -9,7 +9,7 @@
 
 <!-- header -->
 <header>
-<div class="row navbar">
+<div class="row">
 	<!-- logo -->
 	<div class="three columns logo">
 		<?php if ($logo): ?>
