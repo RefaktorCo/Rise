@@ -1,5 +1,3 @@
-<!-- throughout RISE code, class="white" 
-	refers to lighter shade of grey -->
 <div class="white">		
 	<section class="row heading">
 	<!-- section heading -->
@@ -26,4 +24,3 @@
 	</div>
 	</section>
 </div>
-<!-- end white -->
