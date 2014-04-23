@@ -25,21 +25,16 @@
 		<div class="nav-button">
 			<a class="white-text"><i class="icon-reorder"></i></a>
 		</div>
-		
-		
 		<?php print render($page['site_navigation']); ?>
 	</div>
 </div>
 
 </header>
 <!-- end header -->
-
-<?php print $messages; ?>
+<?php print render($page['before_content']); ?>
 <?php print render($page['front_content']); ?>
-
-
 <?php print render($page['after_content']); ?>
-
+<?php print $messages; ?>
 <?php if (render($page['footer'])): ?>
 <footer>
   <?php print render($page['footer']); ?>
@@ -83,13 +78,15 @@
 </div>
 
 <!-- end portfolio detail -->
+<?php if (theme_get_setting('loader') == 1): ?>
 <!-- loader -->
 <script type="text/javascript">
-    //<![CDATA[
-        jQuery(document).ready(function ($) {
-        $(window).load(function() { // makes sure the whole site is loaded
-            $("#status").fadeOut(); // will first fade out the loading animation
-            $("#preloader").delay(350).fadeOut("slow"); // will fade out the grey DIV that covers the website.      
+//<![CDATA[
+  jQuery(document).ready(function ($) {
+  $(window).load(function() { // makes sure the whole site is loaded
+    $("#status").fadeOut(); // will first fade out the loading animation
+    $("#preloader").delay(350).fadeOut("slow"); // will fade out the grey DIV that covers the website.      
 })});
-    //]]>
+//]]>
 </script>
+<?php endif; ?>

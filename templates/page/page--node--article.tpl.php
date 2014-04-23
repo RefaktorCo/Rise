@@ -1,12 +1,3 @@
-<?php if (theme_get_setting('loader') == 1): ?>
-<!-- Preloader -->
-<div id="preloader">
-	<div id="status">
-		&nbsp;
-	</div>
-</div>
-<?php endif; ?>
-
 <!-- header -->
 <header>
 <div class="row navbar">
@@ -25,11 +16,7 @@
 		<div class="nav-button">
 			<a class="white-text"><i class="icon-reorder"></i></a>
 		</div>
-		
-		<!-- link to your section ids -->
-		<!-- we use href attribute for li active class to work on different sections.
-		   we use gumby-goto for easing scroll to target sections -->
-		<?php print render($page['site_navigation']); ?>
+			<?php print render($page['site_navigation']); ?>
 	</div>
 </div>
 
@@ -53,7 +40,6 @@
 </div>
 <!-- end blog menu -->
 <?php endif; ?>
-
 
 <div id="blog" class="grey">
   <section class="row">		

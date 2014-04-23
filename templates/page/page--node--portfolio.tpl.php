@@ -1,12 +1,3 @@
-<?php if (theme_get_setting('loader') == 1): ?>
-<!-- Preloader -->
-<div id="preloader">
-	<div id="status">
-		&nbsp;
-	</div>
-</div>
-<?php endif; ?>
-
 <!-- header -->
 <header>
 <div class="row navbar">
@@ -25,10 +16,6 @@
 		<div class="nav-button">
 			<a class="white-text"><i class="icon-reorder"></i></a>
 		</div>
-		
-		<!-- link to your section ids -->
-		<!-- we use href attribute for li active class to work on different sections.
-		   we use gumby-goto for easing scroll to target sections -->
 		<?php print render($page['site_navigation']); ?>
 	</div>
 </div>
@@ -36,11 +23,29 @@
 </header>
 <!-- end header -->
 
-<?php print $messages; ?>
 <div id="ajaxpage">
-		<div class="white">
-<?php print render($page['content']); ?>
-		</div></div>
+  <div class="white">
+		<?php if ($messages): ?>
+		  <section class="row">
+		    <?php print $messages; ?>
+		  </section>  
+		<?php endif; ?>
+		<?php if ($tabs = render($tabs)): ?>
+		  <section class="row">
+			  <div id="drupal_tabs" class="tabs ">
+			    <?php print render($tabs); ?>
+			  </div>
+		  </section>
+		<?php endif; ?>
+		<?php print render($page['help']); ?>
+		<?php if ($action_links): ?>
+		  <ul class="action-links">
+		    <?php print render($action_links); ?>
+		  </ul>
+		<?php endif; ?>
+		<?php print render($page['content']); ?>
+	</div>
+</div>
 
 <?php print render($page['after_content']); ?>
 		
