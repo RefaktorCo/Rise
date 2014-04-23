@@ -29,7 +29,6 @@
 ?><!-- begin intro-->
 <div class="white">
 
-	
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>

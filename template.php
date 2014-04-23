@@ -311,6 +311,28 @@ function rise_field($variables) {
 }
 
 /**
+* Add several style-related elements into the <head> tag.
+*/
+function rise_preprocess_html(&$vars){
+  
+  // Get the height and width of the logo image for the Portfolio AJAX loading screen.
+  $image_url = parse_url(theme_get_setting('logo'));
+  $image_path = str_replace(base_path(), realpath(DRUPAL_ROOT) . '/', $image_url['path']);
+  $info = image_get_info($image_path);
+  $height = $info['height'];
+  $width = $info['width'];
+
+  $loading_screen_logo = array(
+   '#type' => 'markup',
+   '#markup' => "<style type='text/css'>.loading-screen .logo { width: ".$width."px; height: ".$height."px;}</style> ",
+   '#weight' => 2,
+ );
+ 
+ drupal_add_html_head( $loading_screen_logo, 'loading_screen_logo');
+
+}
+
+/**
 *  Unset color stylesheet depending on theme settings.
 */
 function rise_css_alter(&$css) {

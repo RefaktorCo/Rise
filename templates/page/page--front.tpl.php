@@ -60,7 +60,7 @@
 			<div class="ajax-nav">
 				<section class="row">
 				<ul class="project-nav">
-										<li class="closeProject"><a href="#work"><i class="icon-remove"></i></a></li>
+					<li class="closeProject"><a href="#work"><i class="icon-remove"></i></a></li>
 				</ul>
 				<!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
 				</section>
