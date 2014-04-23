@@ -35,7 +35,7 @@
 			<div class="ajax-nav-mobile">
 				<ul>
 				
-					<li class="closeProject-mobile"><a href="#work"><i class="icon-remove"></i></a></li>
+					<li class="closeProject-mobile"><a href="#"><i class="icon-remove"></i></a></li>
 				
 				</ul>
 			</div>
