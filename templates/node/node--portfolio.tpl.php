@@ -28,10 +28,10 @@
   <section class="row">
 		<ul class="project-nav">
 		  <?php if ( rise_node_pagination($node, 'p') != NULL ) : ?>
-			  <li class="prevProject"><a href="<?php print url('node/' . rise_node_pagination($node, 'p'), array('absolute' => TRUE)); ?>"><i class="icon-chevron-left"></i></a></li>
+			  <li class="prevProject"><a href="#!node/<?php print rise_node_pagination($node, 'p'); ?>"><i class="icon-chevron-left"></i></a></li>
 		  <?php endif; ?>  
 		  <?php if ( rise_node_pagination($node, 'n') != NULL ) : ?>
-			  <li class="nextProject"><a href="<?php print url('node/' . rise_node_pagination($node, 'n'), array('absolute' => TRUE)); ?>"><i class="icon-chevron-right"></i></a></li>
+			  <li class="nextProject"><a href="#!node/<?php print rise_node_pagination($node, 'n'); ?>"><i class="icon-chevron-right"></i></a></li>
 			<?php endif; ?>  
 		</ul>
 	</section>
