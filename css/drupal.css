@@ -10,6 +10,10 @@
 	position: absolute !important;
 }
 
+div.messages {
+	margin-top: 30px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	HEADER/NAV
 /*-----------------------------------------------------------------------------------*/
@@ -371,7 +375,7 @@ border: none;
     display: none;
   }
   
-  .tint {
+  #intro.tint {
     background: rgb(14, 14, 14) !important;
     background: rgba(14, 14, 14, 0.8) !important;
   }
@@ -385,7 +389,7 @@ border: none;
   display: none;
 }
 
-#comments input, #contact input, .comment-form input{
+input{
 	background: #eee;
   color: #1e1e1e;
   height: 56px;
@@ -402,11 +406,16 @@ border: none;
   max-width: 100%;
 }
 
-#comments input[type="text"], .comment-form input[type="text"], #contact input[type="text"]{
+input{
   width: 100%;
 }
 
-#comments textarea, .comment-form textarea,  #contact textarea {
+input[type=submit] {
+	width: auto;
+	padding: 0px 20px;
+}
+
+textarea {
 	background: #eee;
   color: #1e1e1e;
   border: 0px;

@@ -67,6 +67,6 @@ jQuery(document).ready(function ($) {
 	$('#intro').tubular(options);		    });
 </script>
 <style>
-.tint{background: none;}
+#intro.tint{background: none;}
 </style>
 <?php endif; ?>
