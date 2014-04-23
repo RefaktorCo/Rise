@@ -60,9 +60,7 @@
 			<div class="ajax-nav">
 				<section class="row">
 				<ul class="project-nav">
-					<li class="prevProject"><a href="#"><i class="icon-chevron-left"></i></a></li>
-					<li class="nextProject"><a href="#"><i class="icon-chevron-right"></i></a></li>
-					<li class="closeProject"><a href="#work"><i class="icon-remove"></i></a></li>
+										<li class="closeProject"><a href="#work"><i class="icon-remove"></i></a></li>
 				</ul>
 				<!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
 				</section>
