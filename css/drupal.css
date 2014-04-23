@@ -26,8 +26,20 @@ header {
 	margin: 0;
 }
 
+.navbar li.leaf {
+	padding: 0px;
+}
+
+.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a { 
+	background: inherit; 
+}
+
 ul.navigation li {
 	background-color: none !important;
+}
+
+ul.navigation li a {
+	padding: 0px 11px;
 }
 
 ul.navigation.active {
