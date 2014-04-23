@@ -58,6 +58,10 @@ ul.navigation.active {
 	  text-align: left;
   }
   
+  ul.navigation {
+	  overflow-y: auto;
+  }
+  
   ul.navigation.active {
 	  top: 40px !important;
   }
@@ -360,6 +364,17 @@ border: none;
 
 #block-views-intro-block-block {
 	height: 100%;
+}
+
+@media screen and (max-width: 480px) { 
+  #tubular-container {
+    display: none;
+  }
+  
+  .tint {
+    background: rgb(14, 14, 14) !important;
+    background: rgba(14, 14, 14, 0.8) !important;
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/

@@ -66,4 +66,7 @@ jQuery(document).ready(function ($) {
   var options = { videoId: "<?php print strip_tags(render($content['field_intro_video_background']));?>", start: 12 };
 	$('#intro').tubular(options);		    });
 </script>
+<style>
+.tint{background: none;}
+</style>
 <?php endif; ?>
