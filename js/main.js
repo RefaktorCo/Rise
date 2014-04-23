@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 
-/* intro text slider initialize
+  /* intro text slider initialize
 	=========================*/
 	$('.intro-text-slider').flexslider({
 		animation: "fade",
@@ -69,8 +69,8 @@ jQuery(document).ready(function ($) {
 	});
 	}
 
-// Gumby is ready to go
-Gumby.ready(function() {
+	// Gumby is ready to go
+	Gumby.ready(function() {
 	Gumby.log('Gumby is ready to go...', Gumby.dump());
 
 	// placeholder polyfil
@@ -79,43 +79,18 @@ Gumby.ready(function() {
 
 	}
 	
-	/* pretty photo
-	========================= */
-	$("a[data-rel^='prettyPhoto']").prettyPhoto({
-			theme: 'dark_square', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-		});
+	// Oldie document loaded
+	}).oldie(function() {
+		Gumby.warn("This is an oldie browser...");
 	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-	/* twitter
-	=========================*/
-	$('.tweet').tweet({
-		username: "envato",
-		modpath: '/twitter/',
-		count: 1,
-		loading_text: 'loading twitter feed...'
+	// Touch devices loaded
+	}).touch(function() {
+		Gumby.log("This is a touch enabled device...");
+		
 	});
 
-// Oldie document loaded
-}).oldie(function() {
-	Gumby.warn("This is an oldie browser...");
-
-// Touch devices loaded
-}).touch(function() {
-	Gumby.log("This is a touch enabled device...");
-	
-});
-
-// Document ready
-$(function() {
+	// Document ready
+	$(function() {
 	
 	// skip link and toggle on one element
 	// when the skip link completes, trigger the switch
@@ -218,7 +193,7 @@ jQuery(window).scroll(function(){
 
 
 
-/* portfolio filters
+  /* portfolio filters
 	=========================*/
 	$(function() {
 	 // cache container

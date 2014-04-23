@@ -1,3 +1,4 @@
+
 <section class="row heading left-text">
 	<!-- project index and specs -->
 	<div class="bigbottompadding">

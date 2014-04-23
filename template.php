@@ -13,8 +13,8 @@ require_once(drupal_get_path('theme', 'rise').'/includes/twitter.inc');
  */
 function rise_js_alter(&$js) {
   if (isset($js['misc/jquery.js'])) {
-       $jsPath = 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
-       $js['misc/jquery.js']['version'] = '1.10.2';
+       $jsPath = 'https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js';
+       $js['misc/jquery.js']['version'] = '2.0.2';
     $js['misc/jquery.js']['data'] = $jsPath;
   }
 }
