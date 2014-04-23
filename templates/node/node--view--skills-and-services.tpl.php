@@ -15,7 +15,7 @@
 	</p>
 	
 	<!-- read more button -->
-	<div class="modal-button no-mobile">
+	<div class="modal-button">
 		<a href="#" gumby-trigger="#modal_<?php print $node->nid; ?>" class="rise-btn small outline dark centered switch">read more</a>
 		
 	</div>
