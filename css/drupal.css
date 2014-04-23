@@ -30,6 +30,32 @@ ul.navigation li {
 	background-color: none !important;
 }
 
+ul.navigation.active {
+	top: -18px !important;
+}
+
+#logo {
+	margin-top: -8px;
+}
+
+@media screen and (max-width: 768px) { 
+
+  .navbar ul li > a {
+	  line-height: inherit;
+	  height: auto;
+	  text-align: left;
+  }
+  
+  ul.navigation.active {
+	  top: 40px !important;
+  }
+  
+	.navbar ul li {
+	  line-height: inherit;
+	  min-height: inherit;
+	}
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	SEARCH
 /*-----------------------------------------------------------------------------------*/

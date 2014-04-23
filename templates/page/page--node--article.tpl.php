@@ -1,6 +1,6 @@
 <!-- header -->
 <header>
-<div class="row">
+<div class="row navbar">
 	<!-- logo -->
 	<div class="three columns logo">
 		<?php if ($logo): ?>
