@@ -389,7 +389,7 @@ border: none;
   display: none;
 }
 
-input{
+.white input{
 	background: #eee;
   color: #1e1e1e;
   height: 56px;
@@ -410,7 +410,7 @@ input{
   width: 100%;
 }
 
-input[type=submit] {
+input[type=submit], input[type=checkbox] {
 	width: auto;
 	padding: 0px 20px;
 }

@@ -27,36 +27,30 @@
  * @ingroup views_templates
  */
 ?>
-
+<!-- mobile ajax section -->
 <div class="ajax-section">
-		<div class="clearfix">
-			<!-- PROJECT NAVIGATION AND CLOSE BUTTON -->
-			<section class="row">
+	<div class="clearfix">
+		<!-- PROJECT NAVIGATION AND CLOSE BUTTON -->
+		<section class="row">
 			<div class="ajax-nav-mobile">
 				<ul>
-				
 					<li class="closeProject-mobile"><a href="#"><i class="icon-remove"></i></a></li>
-				
 				</ul>
 			</div>
-			<!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
-			</section>
-			<div class="loader">
-			</div>
-			<!-- PROJECT WILL LOSE INSIDE 'AJAX-INSIDE' -->
-			<div class="ajax-outside">
-				<div class="ajax-inside-mobile">
-				</div>
-			</div>
-			<!-- END AJAX CONTENT -->
+		  <!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
+		</section>
+		<div class="loader"></div>
+		<!-- PROJECT WILL LOSE INSIDE 'AJAX-INSIDE' -->
+		<div class="ajax-outside">
+			<div class="ajax-inside-mobile"></div>
 		</div>
-		<!-- END AJAX SECTION -->
-		<div class="clear">
-		</div>
+		<!-- END AJAX CONTENT -->
 	</div>
-	<!-- end mobile ajax section -->
-	<div class="clear">
-	</div>
+	<!-- END AJAX SECTION -->
+	<div class="clear"></div>
+</div>
+<!-- end mobile ajax section -->
+<div class="clear"></div>
 <!-- begin intro-->
 <div class="white">
 

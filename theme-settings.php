@@ -100,6 +100,4 @@ function rise_form_system_theme_settings_alter(&$form, &$form_state) {
       '#title' => t('Add your own CSS'),
       '#default_value' => theme_get_setting('user_css'),
     );  
-		
-	}
-?>
+}

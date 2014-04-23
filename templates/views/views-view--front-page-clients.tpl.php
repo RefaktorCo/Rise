@@ -29,7 +29,6 @@
 ?><!-- begin intro-->
 <div id="clients" class="clients-image <?php print $classes; ?> show" data-stellar-background-ratio="0.5">
 	<div class="tint largepadding">
-
 	  <?php print render($title_prefix); ?>
 	  <?php if ($title): ?>
 	    <?php print $title; ?>
