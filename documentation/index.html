@@ -172,7 +172,106 @@ To display a simple slider of text captions as seen on the demo, the following m
 </pre>
 
 <h4>Parallax</h4>
+<img src="images/rise-parallax-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-parallax-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Image:</strong> A simple image field that will display below the block title.</li>
+<li><strong>Body:</strong> The default Drupal body field displayed below the image field.</li>
+<li><strong>Parallax Background:</strong> An image field that will display as the block background in a parallax style.</li>
+<li><strong>Parallax Category:</strong> An optional field that is a term reference to a Parallax taxonomy vocabulary.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--parallax.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses two views that display content from the Parallax content type but you can create as many instances of Parallax content as you like. We will outline each one individually:</p>
+
+<p><strong>Front Parallax Solutions:</strong></p>
+<img src="images/rise-parallax-2.png" width="800px"><br/><br/>
+<p>The content for this Parallax block is some basic markup using three individual columns. Below is the markup used in this block:</p>
+<pre>
+&lt;div class=&quot;dots&quot;&gt;&lt;/div&gt;
+&lt;!-- first block --&gt;
+&lt;div class=&quot;four columns center pull-left&quot;&gt;
+	&lt;!-- main icon --&gt;
+	&lt;div class=&quot;main-icon&quot;&gt;
+		&lt;i class=&quot;icon-resize-full&quot;&gt;&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;!-- columns info --&gt;
+	&lt;h4&gt;RESPONSIVE DESIGN&lt;/h4&gt;
+	&lt;p&gt;
+		 Lorem ipsum dolor sit amet, adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor et, rhoncus sem.
+	&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- second block --&gt;
+&lt;div class=&quot;four columns center&quot;&gt;
+	&lt;!-- main icon --&gt;
+	&lt;div class=&quot;main-icon&quot;&gt;
+		&lt;i class=&quot;icon-apple&quot;&gt;&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;!-- columns info --&gt;
+	&lt;h4&gt;RETINA READY&lt;/h4&gt;
+	&lt;p&gt;
+		 Lorem ipsum dolor sit amet, adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor et, rhoncus sem.
+	&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- third block --&gt;
+&lt;div class=&quot;four columns center&quot;&gt;
+	&lt;!-- main icon --&gt;
+	&lt;div class=&quot;main-icon&quot;&gt;
+		&lt;i class=&quot;icon-star-empty&quot;&gt;&lt;/i&gt;
+	&lt;/div&gt;
+	&lt;!-- columns info --&gt;
+	&lt;h4&gt;WELL DOCUMENTED&lt;/h4&gt;
+	&lt;p&gt;
+		 Lorem ipsum dolor sit amet, adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor et, rhoncus sem.
+	&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- end four columns --&gt;
+</pre>
+<p>This particular demo View can be imported using the code from the /assets/views/front-parallax.txt file.</p>
+
+<p><strong>Blog Parallax:</strong></p>
+<img src="images/rise-parallax-1.png" width="800px"><br/><br/>
+<p>This particular demo View can be imported using the code from the /assets/views/blog-parallax.txt file.</p>
+<p><strong>Special Instructions:</strong></p>
+<p>As noted the theme demo is using a taxonomy vocabulary called Parallax linked to the Parallax content type via a term reference field. You can create/manage taxonomy vocabularies via /admin/structure/taxonomy and these taxonomy terms can be used within Views to call specific nodes of Parallax content. Only one Parallax content node can be used per view so this taxonomy vocabulary is needed if you plan on having multiple Parallax view blocks.</p>
+
 <h4>Skills and Services</h4>
+
+<img src="images/rise-skills-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-skills-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Skills Icon:</strong> A text field for a Font Awesome icon Class.</li>
+<li><strong>Body:</strong> The default Drupal body field displayed below the image field.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--intro.tpl.php</li>
+  <li>/templates/views/views-view--intro-block.tpl.php</li>
+  <li>/templates/views/views-view-unformated--intro-block.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Intro Block" to display the "Intro" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/intro.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+
+
 <h4>Testimonials</h4>
 <h4>Twitter Feed</h4>
 <h4>Portfolio</h4>
