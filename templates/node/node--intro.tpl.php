@@ -7,7 +7,7 @@
 <?php print render($content['field_intro_content']);?></section>
 <!-- down arrow -->
 <div class="down-arrow">
-	<a href="#about" class="target"><i class="icon-chevron-down"></i></a>
+	<a href="#about" class="target"><i class="fa fa-chevron-down"></i></a>
 </div>
 <?php if (render($content['field_intro_background'])): ?>
 	<script type="text/javascript">
