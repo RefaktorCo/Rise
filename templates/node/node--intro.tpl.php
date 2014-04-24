@@ -1,6 +1,8 @@
 <!-- intro text goes here -->
 <section class="row intro-text">
-<h1><?php print strip_tags(render($content['field_intro_headline']));?></h1>
+<?php if (render($content['field_intro_headline'])): ?>
+  <h1><?php print strip_tags(render($content['field_intro_headline']));?></h1>
+<?php endif; ?>
 
 <?php print render($content['field_intro_content']);?></section>
 <!-- down arrow -->

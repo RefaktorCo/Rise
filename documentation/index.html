@@ -82,7 +82,7 @@ When that option is checked, a select menu appears with a list of all the blocks
 
 <h4>About</h4>
 <img src="images/rise-about-1.png" height="400px"><br/><br/>
-<p>This content type can be used to create a block similar to the one pictured above. It uses the following fields:</p>
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
 
 <img src="images/rise-about-fields.png" width="800px"><br/><br/>
 <p><strong>Fields:</strong></p>
@@ -102,10 +102,75 @@ When that option is checked, a select menu appears with a list of all the blocks
   <li>/templates/views/views-view-unformated--about.tpl.php</li>
 </ul>
 
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Front Page About" to display the "About" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/about.txt file. This view will create a block called View: Front Page About that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
 <h4>Blog Page</h4>
+<p>This content type is used to create the page that displays the "Blog" view block. It uses no additional fields and is only used in coordination with the following template file: /templates/page/page--node--blog-page.tpl.php. To use this page as your blog page, simply create a node with this content type and you can use the block visibility settings on the Blog view block to only display that block on this node page.</p>
+
 <h4>Clients</h4>
+<img src="images/rise-clients-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-clients-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field displayed at the top of the block.</li>
+<li><strong>Client Images:</strong> An image field that allows for multiple images to be uploaded.</li>
+<li><strong>Client Background Image:</strong> An image used as the background of the Clients block in a parallax style.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--clients.tpl.php</li>
+  <li>/templates/views/views-view--front-page-clients.tpl.php</li>
+  <li>/templates/views/views-view-unformated--front-page-clients.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Front Page Clients" to display the "Clients" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/clients.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+<p><strong>Note:</strong> if you plan on using the testimonials feature as well, import the testimonials view first as the default "Front Page Clients" view uses the Testimonials view inside it's footer.</p>
+
 <h4>Intro</h4>
+<img src="images/rise-intro-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-intro-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Intro Background:</strong> An image that can be used as the background for the front page Intro block.</li>
+<li><strong>Intro Video Background:</strong> A field for adding a YouTube video ID to display an optional block video background.</li>
+<li><strong>Intro Content:</strong> A long text field for adding any additional content to display in the block.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--intro.tpl.php</li>
+  <li>/templates/views/views-view--intro-block.tpl.php</li>
+  <li>/templates/views/views-view-unformated--intro-block.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Intro Block" to display the "Intro" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/intro.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+
+<p><strong>Special Instructions:</strong></p>
+<p>
+To display a simple slider of text captions as seen on the demo, the following markup can be used inside the Intro Content field:
+</p>
+<pre>
+&lt;!-- intro text carousel --&gt;
+&lt;div class=&quot;intro-text-slider&quot;&gt;
+  &lt;ul class=&quot;slides&quot;&gt;
+    &lt;li&gt;&lt;h5&gt;SELF PROCLAIMED DIGITAL NINJA.&lt;/h5&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;h5&gt;MAKER OF BEAUTIFUL DIGITAL THINGS.&lt;/h5&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;h5&gt;COFFEE JUNKIE AND A NIGHT OWL.&lt;/h5&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
 <h4>Parallax</h4>
 <h4>Skills and Services</h4>
 <h4>Testimonials</h4>
@@ -129,20 +194,6 @@ This content type can be used to create a portfolio of projects on your site. A 
 <ul>
 	<li>/templates/node/node--portfolio.tpl.php</li>
   <li>/templates/node/node--portfolio-taxonomy.tpl.php</li>
-</ul>
-
-<h4>View Blocks</h4>
-
-<p><strong>Portfolio  - Example: <a href="http://refaktorthemes.com/Rise/portfolio" target="_blank"> http://refaktorthemes.com/Rise/portfolio</a></strong></p>
-<p>This is the standard Portfolio style which utilizes the "Portfolio" view. If you are not using the full demo or did not use the Custom Content module you can use the /assets/views/portfolio.txt (in the root of the download files) to import this view. Then simply place the "View: Portfolio Block" in the Content region and configure the block visibility settings to your liking.</p>
-<ul>
-<p><strong>Template files:</strong></p>
-	<ul>
-		<li>/templates/node/node--view--portfolio.tpl.php</li>
-		<li>/templates/views/views-view--portfolio.tpl.php</li>
-		<li>/templates/views/views-view--unformated-portfolio.tpl.php</li>
-	</ul>
-	
 </ul>
 
 <h4>Contact</h4>
@@ -177,6 +228,8 @@ Rise uses the standard Article content type without any additional fields.
 		<li>/templates/page/node--article.tpl.php</li>
 	</ul>
 </ul>	
+
+<h2>Custom Blocks</h2>
 
 <h2>Theme Settings</h2>
 

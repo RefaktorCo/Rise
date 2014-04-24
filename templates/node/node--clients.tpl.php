@@ -1,10 +1,12 @@
-<style>
-.clients-image{
-  background:url(<?php echo file_create_url($node->field_client_background_image['und'][0]['uri']); ?>);
-  background-attachment:fixed;
-  background-size:cover;
-}
-</style>
+<?php if (render($content['field_client_background_image'])): ?>
+	<style>
+	.clients-image{
+	  background:url(<?php echo file_create_url($node->field_client_background_image['und'][0]['uri']); ?>);
+	  background-attachment:fixed;
+	  background-size:cover;
+	}
+	</style>
+<?php endif; ?>
 
 <section class="row heading">
 	<h2 class="s-bold"><?php print $title; ?></h2>
