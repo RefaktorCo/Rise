@@ -14,7 +14,7 @@
 	<!-- navigation -->
 	<div class="nine columns" id="nav">
 		<div class="nav-button">
-			<a class="white-text"><i class="icon-reorder"></i></a>
+			<a class="white-text"><i class="fa fa-bars"></i></a>
 		</div>
 		<?php print render($page['site_navigation']); ?>
 	</div>

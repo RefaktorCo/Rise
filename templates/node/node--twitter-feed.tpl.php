@@ -57,7 +57,7 @@ if($username[0]) {
 		<div class="ten columns centered">
 			<!-- twitter icon -->
 			<div class="main-icon">
-				<i class="icon-twitter"></i>
+				<i class="icon-twitter fa fa-twitter"></i>
 			</div>
 			<div class="tweet_time">
 			  <a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>/status/<?php print $tweet_data[0]["id"]; ?>"><?php print $tweet_created_trimmed; ?></a>
