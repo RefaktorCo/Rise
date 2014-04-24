@@ -389,7 +389,7 @@ border: none;
   display: none;
 }
 
-.white input{
+.white input, .comment-form input{
 	background: #eee;
   color: #1e1e1e;
   height: 56px;
