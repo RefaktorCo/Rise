@@ -39,52 +39,54 @@ Option 2:
 <ol>
 <li>Create a database for this installation of Drupal and import the SQL file that came with the theme.</li>
 <li>Follow <a href="http://drupal.org/documentation/install/settings-file" target="_blank"> these directions</a> to create the settings.php file. Save this file somewhere so you can copy it over to the Drupal installation we have provided.</li>
-<li>Copy the entire contents of the /demo/Ebor folder to the location on your web server where you want your site to be accessed. If you want your primary domain to point to your install of Ebor, copy everything to the root folder. If you want your site to be accessed as a subsection of your domain (for example: yourdomain.com/drupal) then simply rename the /demo/Ebor folder to the desired name and upload to the root of your server. Also be sure to copy over the settings.php file mentioned in the previous step</li>
+<li>Copy the entire contents of the /demo/Rise folder from the download files to the location on your web server where you want your site to be accessed. If you want your primary domain to point to your install of Rise, copy everything to the root folder. If you want your site to be accessed as a subsection of your domain (for example: yourdomain.com/drupal) then simply rename the /demo/Rise folder to the desired name and upload to the root of your server. Also be sure to copy over the settings.php file mentioned in the previous step</li>
 <li>Login to your site with the username <strong>admin</strong> and the password <strong>admin</strong> and visit /admin/people to change the admin username and password.</li>
-<li>Go through the Drupal configuration found in /admin/config options and update all the necessary information to reflect your website. Also be sure to visit /admin/config/media/file-system and change the Temporary Directory.</li>
+<li>Go through the Drupal configuration found in /admin/config options and update all the necessary information to reflect your website. Also be sure to visit /admin/config/media/file-system and change the Temporary Directory if needed.</li>
 
 </ol>
-<h2>Ebor Sub-Theme</h2>
+<h2>Rise Sub-Theme</h2>
 
-<p>Ebor comes with a shell sub-theme called Ebor_sub that you can use to make customizations to the style and template structure of the parent theme without having to modify the parent theme itself. This is useful if you plan on updating the parent theme as we release updates on ThemeForest. If you performed the full install you will already see Ebor_sub in the list of themes available. If you did the standalone install you can find the Ebor_sub.zip file in the root of the download files and you can install it like any other theme.</p>
-<p>There is an empty stylesheet already defined which is /css/custom.css (inside the Ebor_sub folder). Use this file to add all of the custom CSS that you plan on using. You can also copy any template file from the /Ebor/templates folder into the /Ebor_sub/templates folder and it will listen to the sub-themes template file first. This will allow you to update the parent theme as we make updates without losing your customizations. Just pay attention to the changelog and compare the parent theme files with yours and make any adjustments as needed.</p>
-<p>You will need to configure the sub-themes theme settings separately from the parent theme's, so visit /admin/appearance/settings/Ebor_sub to configure the theme settings for the sub-theme. You also need to configure the block regions separately.</p>
-</ol>  
+<p>Rise comes with a shell sub-theme called Rise_sub that you can use to make customizations to the style and template structure of the parent theme without having to modify the parent theme itself. This is useful if you plan on updating the parent theme as we release updates on ThemeForest. If you performed the full install you will already see Rise_sub in the list of themes available. If you did the standalone install you can find the Rise_sub.zip file in the root of the download files and you can install it like any other theme.</p>
+<p>There is an empty stylesheet already defined which is /css/custom.css (inside the Rise_sub folder). Use this file to add all of the custom CSS that you plan on using. You can also copy any template file from the /Rise/templates folder into the /Rise_sub/templates folder and it will listen to the sub-themes template file first. This will allow you to update the parent theme as we make updates without losing your customizations. Just pay attention to the changelog and compare the parent theme files with yours and make any adjustments as needed.</p>
+<p>You will need to configure the sub-themes theme settings separately from the parent theme's, so visit /admin/appearance/settings/Rise_sub to configure the theme settings for the sub-theme. You also need to configure the block regions separately.</p>
+
 <h2>Menu</h2>
-<p>Ebor has a block region called Site Navigation which can be used to add any menu block you like. The demo simply uses the default Main Menu block but you can create a custom menu block if you like.</p>
-
-<img src="images/menu-2.png"><br/><br/>
-
-<p><strong>Note:</strong> make sure to check the "show as expanded" box on all parent items with children to ensure the dropdown menu works correctly.</p>
-
+<p>
+Rise uses a custom menu module to create the "scroll to" style menu used on the front page. The module can be found inside the /modules folder in the download files and can be uploaded to /sites/all/modules. When activated, it creates an empty menu called Rise Menu which is the only menu this module will affect. When creating/editing a menu link in the Rise Menu, an option to enable the Scroll-To effect can be found at the top of the edit menu link page (see image below):
+</p>
+<img src="images/rise-menu-1.png"><br/><br/>
+<p>
+When that option is checked, a select menu appears with a list of all the blocks inside the "Front Content" region. Select the block you would like the menu item to link to and the module takes care of the rest. You can also create a standard menu item by not checking the "Enable Scroll-To" option which results in the standard options normally seen on the edit menu item page. The Rise Menu supports dropdowns as well so make sure to check the "show as expanded" box on all parent items with children to ensure the dropdown menu works correctly.
+</p>
 
 <h2>Modules</h2>
 <p>Below are the modules required to fully utilize the theme:</p>
 
-<h4>General Required Modules</h4>
 <ul>
 <li><a href="http://drupal.org/project/ctools">Chaos Tools</a></li>
 <li><a href="http://drupal.org/project/views">Views</a></li>
-<li><a href="https://drupal.org/project/exclude_node_title">Exclude Node Title</a></li>
+<li>Rise Menu (/modules/rise_menu in the download files)</li>
 </ul>
 
-<h3>Ebor Social</h3>
-<p>Ebor Social is a simple module that allows you to display social icon links in a block. Once installed the module can be configured via /admin/config/ebor_social and the "Ebor Social" block can be added to any region via /admin/structure/block</p>
-<p>A copy of the module can be found in the /assets folder in the ThemeForest download files and is also included in the full install.</p>
+<p>These are additional modules used in the demo but are not required:</p>
+<li><a href="http://drupal.org/project/admin_menu">Admin Menu</a></li>
+<li><a href="http://drupal.org/project/pathauto">Pathauto</a></li>
+<li><a href="http://drupal.org/project/token">Token (required by Pathauto)</a></li>
 
-<h3>Ebor Custom Content</h3>
-<p>If you used the "theme only" option to install the theme on an existing install that already has content we recommend you use our Ebor Custom Content module to create the additional content types, fields and Views needed to fully utilize the theme. You will find it in the /assets folder in the download files. This module is a custom <a href="http://drupal.org/project/features" target="_blank">Features</a> module and will not run without it. We recommend copying all of the modules from the /drupal_7/sites/all/modules folder into your install if you do not already have them. After you have all the modules simply upload and activate the Ebor Custom Content module and the content types, fields and views will automatically be created.</p>
+
+<h3>Rise Custom Content</h3>
+<p>If you used the "theme only" option to install the theme on an existing install that already has content we recommend you use our Rise Custom Content module to create the additional content types, fields and Views needed to fully utilize the theme. You will find it in the /assets folder in the download files. This module is a custom <a href="http://drupal.org/project/features" target="_blank">Features</a> module and will not run without it. We recommend copying all of the modules from the /drupal_7/sites/all/modules folder into your install if you do not already have them. After you have all the modules simply upload and activate the Rise Custom Content module and the content types, fields and views will automatically be created.</p>
 
 <h2>Mega Slider</h2>
-<p>Ebor includes the Drupal <a href="http://codecanyon.net/item/mega-slider/4313171" target="_blank">Mega Slider</a> module. This module offers an incredible number of options to create the exact slider to meet your needs. To begin configuring your slider visit /admin/structure/md-slider and press the "add new slider" link. You can find documentation for the slider inside the md_slider module folder and you can reference the video below.</p>
+<p>Rise includes the Drupal <a href="http://codecanyon.net/item/mega-slider/4313171" target="_blank">Mega Slider</a> module. This module offers an incredible number of options to create the exact slider to meet your needs. To begin configuring your slider visit /admin/structure/md-slider and press the "add new slider" link. You can find documentation for the slider inside the md_slider module folder and you can reference the video below.</p>
 
-<p><iframe width="560" height="315" src="http://www.youtube.com/embed/G2LW6RrjhvM" frameborder="0" allowfullscreen></iframe></p>
+<p><iframe width="560" height="315" src="http://www.youtube.com/embed/G2LW6RrjhvM" framRiseder="0" allowfullscreen></iframe></p>
 
 <h2>Content Types</h2>
 
 <h3>Portfolio</h3>
 <p>
-This content type can be used to create a portfolio of projects on your site. A collection of portfolio nodes can be displayed in a view block as seen on <a href="http://refaktorthemes.com/ebor/portfolio" target="_blank"> http://refaktorthemes.com/ebor/portfolio</a>. Below we will outline the fields used in this content type and the different view blocks and their corresponding theme templates.
+This content type can be used to create a portfolio of projects on your site. A collection of portfolio nodes can be displayed in a view block as seen on <a href="http://refaktorthemes.com/Rise/portfolio" target="_blank"> http://refaktorthemes.com/Rise/portfolio</a>. Below we will outline the fields used in this content type and the different view blocks and their corresponding theme templates.
 </p>
 <h4>Fields:</h4>
 
@@ -105,7 +107,7 @@ This content type can be used to create a portfolio of projects on your site. A 
 
 <h4>View Blocks</h4>
 
-<p><strong>Portfolio  - Example: <a href="http://refaktorthemes.com/ebor/portfolio" target="_blank"> http://refaktorthemes.com/ebor/portfolio</a></strong></p>
+<p><strong>Portfolio  - Example: <a href="http://refaktorthemes.com/Rise/portfolio" target="_blank"> http://refaktorthemes.com/Rise/portfolio</a></strong></p>
 <p>This is the standard Portfolio style which utilizes the "Portfolio" view. If you are not using the full demo or did not use the Custom Content module you can use the /assets/views/portfolio.txt (in the root of the download files) to import this view. Then simply place the "View: Portfolio Block" in the Content region and configure the block visibility settings to your liking.</p>
 <ul>
 <p><strong>Template files:</strong></p>
@@ -119,7 +121,7 @@ This content type can be used to create a portfolio of projects on your site. A 
 
 <h3>Contact</h3>
 <p>
-This content type can be used to create a contact page such as the one seen at <a href="http://refaktorthemes.com/ebor/contact" target="_blank"> http://refaktorthemes.com/ebor/contact</a>. Below we will outline the fields used in this content type nd their corresponding theme template files.
+This content type can be used to create a contact page such as the one seen at <a href="http://refaktorthemes.com/Rise/contact" target="_blank"> http://refaktorthemes.com/Rise/contact</a>. Below we will outline the fields used in this content type nd their corresponding theme template files.
 </p>
 <p><strong>Fields:</strong></p>
 <img src="images/contact.png"><br/><br/>
@@ -136,12 +138,12 @@ This content type can be used to create a contact page such as the one seen at <
 </ul>	
 
 <p><strong>Map Embed Example:</strong></p>
-<pre>&lt;iframe width=&quot;425&quot; height=&quot;350&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://maps.google.co.uk/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=york&amp;amp;aq=&amp;amp;sll=52.8382,-2.327815&amp;amp;sspn=12.413292,18.764648&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=York,+United+Kingdom&amp;amp;t=m&amp;amp;z=13&amp;amp;ll=53.962301,-1.081884&amp;amp;output=embed&amp;iwloc=near&quot;&gt;&lt;/iframe&gt;</pre>
+<pre>&lt;iframe width=&quot;425&quot; height=&quot;350&quot; framRiseder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://maps.google.co.uk/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=york&amp;amp;aq=&amp;amp;sll=52.8382,-2.327815&amp;amp;sspn=12.413292,18.764648&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=York,+United+Kingdom&amp;amp;t=m&amp;amp;z=13&amp;amp;ll=53.962301,-1.081884&amp;amp;output=embed&amp;iwloc=near&quot;&gt;&lt;/iframe&gt;</pre>
 
 
 <h3>Article</h3>
 <p>
-Ebor uses the standard Article content type without any additional fields.
+Rise uses the standard Article content type without any additional fields.
 </p>
 
 <p><strong>Template files:</strong></p>
@@ -152,21 +154,21 @@ Ebor uses the standard Article content type without any additional fields.
 
 <h4>View Blocks</h4>
 
-<p><strong>Blog - Examples: <a href="http://refaktorthemes.com/ebor/blog" target="_blank"> http://refaktorthemes.com/ebor/blog</a>.</strong></p>
+<p><strong>Blog - Examples: <a href="http://refaktorthemes.com/Rise/blog" target="_blank"> http://refaktorthemes.com/Rise/blog</a>.</strong></p>
 <p>This is the default blog style which utilizes the "Blog" view. If you are not using the full demo or did not use the Custom Content module you can use the /assets/views/blog.txt (in the root of the download files) to import this view. Then simply place the "View: Blog" block in the Content region and configure the block visibility settings to your liking.</p>
 
 <h2>Block Regions</h2>
-<p>Ebor features 11 block regions where you can add your blocks. Visit yourdomain.com/admin/structure/block to add your own content to the defined block regions. Press "Add Block" to create a new custom blog, or select an existing block from the Disabled list below the defined block regions.</p>
+<p>Rise features 11 block regions where you can add your blocks. Visit yourdomain.com/admin/structure/block to add your own content to the defined block regions. Press "Add Block" to create a new custom blog, or select an existing block from the Disabled list below the defined block regions.</p>
 
 <h2>Font Awesome</h2>
-<p>Ebor supports the <a href="http://fontawesome.io/">Font Awesome</a> font library which can be used to render various icons. For example:</p>
+<p>Rise supports the <a href="http://fontawesome.io/">Font Awesome</a> font library which can be used to render various icons. For example:</p>
 
 <pre>
 &lt;i class=&quot;fa fa-rub&quot;&gt;&lt;/i&gt;
 </pre>
 
 <h2>Thank You</h2>
-<p>Thank you very much for purchasing the Ebor Responsive Drupal 7 theme. Once again if you have any issues or feedback please connect via the <a href="http://themeforest.net/user/refaktor#from" target="_blank">ThemeForest author page</a>. Enjoy using Ebor!</p>
+<p>Thank you very much for purchasing the Rise Responsive Drupal 7 theme. Once again if you have any issues or feedback please connect via the <a href="http://themeforest.net/user/refaktor#from" target="_blank">ThemeForest author page</a>. Enjoy using Rise!</p>
 </p>&copy 2014 Refaktor.
 </div>
 <script>$('#toc').toc();</script></body></html>
