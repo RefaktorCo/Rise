@@ -258,21 +258,49 @@ To display a simple slider of text captions as seen on the demo, the following m
 <ul>
 <li><strong>Title:</strong> The default Drupal title field.</li>
 <li><strong>Skills Icon:</strong> A text field for a Font Awesome icon class.</li>
-<li><strong>Body:</strong> The default Drupal body field displayed below the image field.</li>
+<li><strong>Body:</strong> The default Drupal body field displayed below the skills icon.</li>
 </ul>
 
 <p><strong>Template files:</strong></p>
 <ul>
-	<li>/templates/node/node--intro.tpl.php</li>
-  <li>/templates/views/views-view--intro-block.tpl.php</li>
-  <li>/templates/views/views-view-unformated--intro-block.tpl.php</li>
+	<li>/templates/node/node--skills-and-services.tpl.php</li>
+  <li>/templates/views/views-view--skills-and-services.tpl.php</li>
+  <li>/templates/views/views-view-unformated--skills-and-services.tpl.php</li>
 </ul>
 
 <p><strong>Views:</strong></p>
-<p>The demo uses a view called "Intro Block" to display the "Intro" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/intro.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+<p>The demo uses a view called "Front Page Testimonials" to display the content of the testimonials content type. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/testimonials.txt file.</p>
 
+<p><strong>Special Instructions:</strong></p>
+<p>
+As noted above in the "Clients" section, this view is displayed inside the footer of the Clients view to be a part of the Clients view block. 
+</p>
 
 <h4>Testimonials</h4>
+
+<img src="images/rise-testimonials-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-testimonials-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Body:</strong> The default Drupal body field.</li>
+<li><strong>Testimonial Name:</strong> Field for the name of the person giving the testimonial.</li>
+<li><strong>Testimonial Company:</strong> Field for the company or organization the testimonial author represents.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--testimonials.tpl.php</li>
+  <li>/templates/views/views-view--front-page-testimonials.tpl.php</li>
+  <li>/templates/views/views-view-unformated--front-page-testimonials.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Skills and Services" to display the content of the same name. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/skills.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+
 
 <h4>Twitter Feed</h4>
 <p><strong>Note:</strong> Before you can use the Twitter widget you will need the necessary authentication keys. Visit <a href="https://dev.twitter.com/apps" target="_blank">https://dev.twitter.com/apps</a> and log in with your Twitter account. Once there you can create an app and generate the OAuth keys needed to enter into the corresponding content type fields.</p>
