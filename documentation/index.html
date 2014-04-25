@@ -299,7 +299,7 @@ As noted above in the "Clients" section, this view is displayed inside the foote
 </ul>
 
 <p><strong>Views:</strong></p>
-<p>The demo uses a view called "Skills and Services" to display the content of the same name. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/skills.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+<p>The demo uses a view called "Skills and Services" to display the content of the same name. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/skills.txt file. This view will create a block called View: Skills and Services that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
 
 <h4>Twitter Feed</h4>
@@ -327,50 +327,68 @@ As noted above in the "Clients" section, this view is displayed inside the foote
 </ul>
 
 <p><strong>Views:</strong></p>
-<p>The demo uses a view called "Front Page Twitter" to display the Twitter feed content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/twitter.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+<p>The demo uses a view called "Front Page Twitter" to display the Twitter feed content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/twitter.txt file. This view will create a block called View: Front Page Twitter that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
 
 <h4>Portfolio</h4>
-<p>
-This content type can be used to create a portfolio of projects on your site. A collection of portfolio nodes can be displayed in a view block as seen on <a href="http://refaktorthemes.com/Rise/portfolio" target="_blank"> http://refaktorthemes.com/Rise/portfolio</a>. Below we will outline the fields used in this content type and the different view blocks and their corresponding theme templates.
-</p>
-<h4>Fields:</h4>
 
-<img src="images/portfolio.png"><br/><br/>
+<img src="images/rise-portfolio-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-portfolio-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
 <ul>
 <li><strong>Title:</strong> The default Drupal title field.</li>
 <li><strong>Body:</strong> The default Drupal body field.</li>
-<li><strong>Portfolio Tags:</strong> Term reference field associated with the "Portfolio" taxonomy vocabulary.</li>
-<li><strong>Portfolio Cover Image:</strong> Image that displays in the Portfolio view blocks.</li>
-<li><strong>Portfolio Content Image:</strong> Image(s) that display in the Portfolio node content.</li>
-</ul>
-
-<p><strong>Template files</strong></p>
-<ul>
-	<li>/templates/node/node--portfolio.tpl.php</li>
-  <li>/templates/node/node--portfolio-taxonomy.tpl.php</li>
-</ul>
-
-<h4>Contact</h4>
-<p>
-This content type can be used to create a contact page such as the one seen at <a href="http://refaktorthemes.com/Rise/contact" target="_blank"> http://refaktorthemes.com/Rise/contact</a>. Below we will outline the fields used in this content type nd their corresponding theme template files.
-</p>
-<p><strong>Fields:</strong></p>
-<img src="images/contact.png"><br/><br/>
-<ul>
-  <li><strong>Title:</strong> The default Drupal title field.</li>
-	<li><strong>Contact Map:</strong> A long text field to embed a Google Map iFrame (<a href="https://maps.google.com/">https://maps.google.com/</a>)</li>
-	<li><strong>Body:</strong> The default Drupal body field.</li>
+<li><strong>Portfolio Image:</strong> Image field that allows for multiple images. First image will appear in block grid.</li>
+<li><strong>Portfolio Category:</strong> Term reference field linked to a Portfolio taxonomy vocabulary.</li>
 </ul>
 
 <p><strong>Template files:</strong></p>
-	<ul>
-		<li>/templates/node/node--contact.tpl.php</li>
-	</ul>
-</ul>	
+<ul>
+	<li>/templates/node/node--portfolio.tpl.php</li>
+	<li>/templates/node/node--view--portfolio.tpl.php</li>
+  <li>/templates/views/views-view--portfolio.tpl.php</li>
+  <li>/templates/views/views-view-unformated--portfolio.tpl.php</li>
+</ul>
 
-<p><strong>Map Embed Example:</strong></p>
-<pre>&lt;iframe width=&quot;425&quot; height=&quot;350&quot; framRiseder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://maps.google.co.uk/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=york&amp;amp;aq=&amp;amp;sll=52.8382,-2.327815&amp;amp;sspn=12.413292,18.764648&amp;amp;ie=UTF8&amp;amp;hq=&amp;amp;hnear=York,+United+Kingdom&amp;amp;t=m&amp;amp;z=13&amp;amp;ll=53.962301,-1.081884&amp;amp;output=embed&amp;iwloc=near&quot;&gt;&lt;/iframe&gt;</pre>
+<p><strong>Views:</strong></p>
+
+<p>The demo uses a view called "Portfolio" to display the content of the same name. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/portfolio.txt file. This view will create a block called View: Portfolio that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+
+<p><strong>Portfolio Filters:</strong></p>
+
+<p>The Portfolio Block view includes support for an Isotope filter effect powered by Taxonomy terms. To utilize this effect visit /admin/structure/taxonomy and create a new vocabulary (example: Portfolio). After creating your vocabulary you can create the terms you wish to use to categorize your portfolio items. This taxonomy vocabulary can be linked to the Portfolio content type via a term reference field so you can select the category or categories you want to place your items into.</p>
+
+<p>The filters are powered by a view block called Portfolio Filters that should be added to the header of the Portfolio view. If you don't already have this view you can use the code /assets/views/portfolio-filters.txt to import this view block.</p>
+
+<p><strong>Template files:</strong></p>
+<ul>
+  <li>/templates/views/views-view-list--portfolio-filters.tpl.php</li>
+  <li>/templates/views/views-view-fields--portfolio-filters.tpl.php</li>
+</ul>
+
+<h4>Contact</h4>
+
+<img src="images/rise-contact-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-contact-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Contact Caption:</strong> An optional text field that will display below the block title.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--contact.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Front Page Contact" to display the custom contact block. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/contact.txt file. This view will create a block called View: Front Page Contact that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
 
 <h4>Article</h4>
