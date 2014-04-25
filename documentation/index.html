@@ -105,6 +105,30 @@ When that option is checked, a select menu appears with a list of all the blocks
 <p><strong>Views:</strong></p>
 <p>The demo uses a view called "Front Page About" to display the "About" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/about.txt file. This view will create a block called View: Front Page About that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
+<h4>Article</h4>
+<img src="images/rise-article-1.png" height="400px"><br/><br/>
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-article-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field displayed at the top of the block.</li>
+<li><strong>Body:</strong> The default Drupal body field.</li>
+<li><strong>Tags:</strong> Standard article term reference field.</li>
+<li><strong>Image:</strong> Standard article image field</li>
+<li><strong>Before Title:</strong> Long text field for embedding content like videos that will display before the article title.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--article.tpl.php</li>
+	<li>/templates/page/page--node--article.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Blog" to display the "About" content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/blog.txt file. This view will create a block called View: Blog that can be added to the "content" region (see the "Blog" section of these docs for more instructions regarding the blog page).</p>
+
+
 <h4>Blog Page</h4>
 <p>This content type is used to create the page that displays the "Blog" view block. It uses no additional fields and is only used in coordination with the following template file: /templates/page/page--node--blog-page.tpl.php. To use this page as your blog page, simply create a node with this content type and you can use the block visibility settings on the Blog view block to only display that block on this node page.</p>
 
@@ -391,20 +415,12 @@ As noted above in the "Clients" section, this view is displayed inside the foote
 <p>The demo uses a view called "Front Page Contact" to display the custom contact block. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/contact.txt file. This view will create a block called View: Front Page Contact that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
 
 
-<h4>Article</h4>
-<p>
-Rise uses the standard Article content type without any additional fields.
-</p>
-
-<p><strong>Template files:</strong></p>
-	<ul>
-		<li>/templates/page/node--article.tpl.php</li>
-	</ul>
-</ul>	
 
 <h2>Custom Blocks</h2>
 
 <h2>Theme Settings</h2>
+
+<h2>Blog Page</h2>
 
 <h2>Block Regions</h2>
 <p>Rise features 11 block regions where you can add your blocks. Visit yourdomain.com/admin/structure/block to add your own content to the defined block regions. Press "Add Block" to create a new custom blog, or select an existing block from the Disabled list below the defined block regions.</p>
