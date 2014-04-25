@@ -383,6 +383,10 @@ border: none;
     background: rgb(14, 14, 14) !important;
     background: rgba(14, 14, 14, 0.8) !important;
   }
+  
+  #block-views-intro-block-block {
+    height: auto;
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
