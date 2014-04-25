@@ -27,6 +27,16 @@ div.messages {
   background-size:cover !important;
 }
 
+#sidebar-left {
+	padding-right: 40px;
+	overflow: auto;
+}
+
+#sidebar-right {
+	padding-left: 40px;
+	overflow: auto;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	HEADER/NAV
 /*-----------------------------------------------------------------------------------*/

@@ -43,13 +43,27 @@
 <?php endif; ?>
 </section>
 <section class="row">
-  <div class="eight columns">
+
+  <?php if ( ($page['sidebar_left']) ) : ?>
+    <aside id="sidebar-left">
+		  <div class="<?php if ($page['sidebar_right']) { echo "three columns";} else { echo "four columns"; } ?>">
+		    <?php print render($page['sidebar_left']); ?>
+		  </div>
+	  </aside>  
+  <?php endif; ?>
+  
+  <div class="<?php if ( ($page['sidebar_right']) AND ($page['sidebar_left']) ) { echo "six columns";} elseif ( ($page['sidebar_right']) OR ($page['sidebar_left']) ) {  echo "eight columns"; }  else { echo "twelve columns"; } ?>">
     <?php print render($page['content']); ?>
   </div>
   
-  <div class="push_one three columns">
-    <?php print render($page['sidebar_primary']); ?>
-  </div>  
+  <?php if ( ($page['sidebar_right']) ) : ?>
+    <aside id="sidebar-right">
+		   <div class="<?php if ($page['sidebar_left']) { echo "three columns";} else { echo "four columns"; } ?>">
+		    <?php print render($page['sidebar_right']); ?>
+		  </div>
+	  </aside>  
+  <?php endif; ?>
+  
 </section>
 </div>
 <?php if (render($page['footer'])): ?>
