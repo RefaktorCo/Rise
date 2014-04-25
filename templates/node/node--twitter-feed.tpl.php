@@ -71,7 +71,7 @@ if (render($content['field_twitter_background_image'])) {
 			</div>
 			<div class="tweet_text">
 			  <?php print $tweet_text; ?>
-			</div
+			</div>
 		</div>
 		<!-- link to your twitter profile -->
 		<a href="http://twitter.com/<?php print strip_tags(render($content['field_twitter_handle'])); ?>" class="rise-btn light small">Follow me on Twitter!</a>
