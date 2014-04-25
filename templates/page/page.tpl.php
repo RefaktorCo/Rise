@@ -23,6 +23,11 @@
 </header>
 <!-- end header -->
 <div class="white">
+<?php if ($title): ?>
+<section class="row bigtoppadding heading">
+	<h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+</section>
+<?php endif; ?>
 <section class="row">
 <?php print $messages; ?>
 <?php if ($tabs = render($tabs)): ?>
@@ -36,8 +41,15 @@
     <?php print render($action_links); ?>
   </ul>
 <?php endif; ?>
-
-<?php print render($page['content']); ?>
+</section>
+<section class="row">
+  <div class="eight columns">
+    <?php print render($page['content']); ?>
+  </div>
+  
+  <div class="push_one three columns">
+    <?php print render($page['sidebar_primary']); ?>
+  </div>  
 </section>
 </div>
 <?php if (render($page['footer'])): ?>
