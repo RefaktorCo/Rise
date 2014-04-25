@@ -305,6 +305,30 @@ As noted above in the "Clients" section, this view is displayed inside the foote
 <h4>Twitter Feed</h4>
 <p><strong>Note:</strong> Before you can use the Twitter widget you will need the necessary authentication keys. Visit <a href="https://dev.twitter.com/apps" target="_blank">https://dev.twitter.com/apps</a> and log in with your Twitter account. Once there you can create an app and generate the OAuth keys needed to enter into the corresponding content type fields.</p>
 
+<img src="images/rise-twitter-1.png" width="800px"><br/><br/>
+
+<p>This content type can be used to create a block like the one pictured above. It uses the following fields:</p>
+
+<img src="images/rise-twitter-fields.png" width="800px"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Title:</strong> The default Drupal title field.</li>
+<li><strong>Twitter Handle:</strong> The account for the feed you wish to display.</li>
+<li><strong>Twitter Consumer Key:</strong> The consumer key OAuth key.</li>
+<li><strong>Twitter Consumer Secret:</strong> The consumer secret OAuth key.</li>
+<li><strong>Twitter User Token:</strong> The user token kOAuth key.</li>
+<li><strong>Twitter User Secret:</strong> The user secret OAuth key.</li>
+<li><strong>Twitter Background Image:</strong> An image field that will display as the block background in a parallax style.</li>
+</ul>
+
+<p><strong>Template files:</strong></p>
+<ul>
+	<li>/templates/node/node--twitter-feed.tpl.php</li>
+</ul>
+
+<p><strong>Views:</strong></p>
+<p>The demo uses a view called "Front Page Twitter" to display the Twitter feed content. If you are working off a fresh install and did not use the Rise Custom Content module you can manually import the view using the code from the /assets/views/twitter.txt file. This view will create a block called View: Front Page Clients that can be added to the "Front Content" region and linked to via the Rise Menu.</p>
+
 
 <h4>Portfolio</h4>
 <p>
