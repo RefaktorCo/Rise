@@ -69,10 +69,10 @@ function rise_form_alter(&$form, &$form_state, $form_id) {
     
     // Add extra attributes to the text box
     $form['search_block_form']['#attributes']['class'] = array('search');
+    // Add extra attributes to the text box
+    $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+    $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
     
-    // Alternative (HTML5) placeholder attribute instead of using the javascript
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
-
   }
 } 
 
