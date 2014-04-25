@@ -41,7 +41,7 @@
 		  ?>
 		    <div class="link-wrapper">
 		      <?php hide($content['links']); ?>
-		      <a href="<?php print $node_url; ?>" class="rise-btn dark small pull_right"><i class="icon-chevron-right"></i> &nbsp;<?php print t('read more'); ?></a>
+		      <a href="<?php print $node_url; ?>" class="rise-btn dark small pull_right"><i class="fa fa-chevron-right"></i> &nbsp;<?php print t('read more'); ?></a>
 		    </div>
 		  <?php endif; ?>
 		  <div class="clear"></div>
@@ -54,11 +54,11 @@
 	<section class="row">
 	<ul class="post-nav">
 	  <?php if ( rise_node_pagination($node, 'p') != NULL ) : ?>
-		  <li><a href="<?php print url('node/' . rise_node_pagination($node, 'p'), array('absolute' => TRUE)); ?>"><i class="icon-chevron-left"></i></a></li>
+		  <li><a href="<?php print url('node/' . rise_node_pagination($node, 'p'), array('absolute' => TRUE)); ?>"><i class="fa fa-chevron-left"></i></a></li>
 	  <?php endif; ?>  
-		<li><a href="../"><i class="icon-list"></i></a></li>
+		<li><a href="./"><i class="fa fa-bars"></i></a></li>
 		<?php if ( rise_node_pagination($node, 'n') != NULL ) : ?>
-		  <li><a href="<?php print url('node/' . rise_node_pagination($node, 'n'), array('absolute' => TRUE)); ?>"><i class="icon-chevron-right"></i></a></li>
+		  <li><a href="<?php print url('node/' . rise_node_pagination($node, 'n'), array('absolute' => TRUE)); ?>"><i class="fa fa-chevron-right"></i></a></li>
 		<?php endif; ?>  
 	</ul>
 	</section>

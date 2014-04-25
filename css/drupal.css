@@ -105,6 +105,15 @@ ul.navigation.active {
 /*	BLOG
 /*-----------------------------------------------------------------------------------*/
 
+.post-nav li i {
+  padding-top: 6px;
+}
+
+.blog-menu .search.input {
+	color: #444;
+	font-size: 14px;
+}
+
 .article-title a {
 	color: #1e1e1e;
 }
