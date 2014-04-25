@@ -55,7 +55,7 @@
 			<div class="ajax-nav">
 				<section class="row">
 				<ul class="project-nav">
-					<li class="closeProject"><a href="<?php global $base_url; echo $base_url; ?>#"><i class="icon-remove"></i></a></li>
+					<li class="closeProject"><a href="<?php global $base_url; echo $base_url; ?>#"><i class="fa fa-times"></i></a></li>
 				</ul>
 				<!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
 				</section>
