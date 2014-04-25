@@ -59,6 +59,7 @@ function rise_form_system_theme_settings_alter(&$form, &$form_state) {
       '#type' => 'checkbox',
       '#title' => t('Loader'),
       '#default_value' => theme_get_setting('loader'),
+      '#description' => t('Check to enable the page loading graphic on the front page'),
     );
   
   // Post Meta
