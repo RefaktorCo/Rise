@@ -1,15 +1,14 @@
 <div class="ajax-nav-mobile mobile-pagination">
-				<ul>
-				
-					<?php if ( rise_node_pagination($node, 'p') != NULL ) : ?>
-			  <li class="prevProject-mobile"><a href="#!node/<?php print rise_node_pagination($node, 'p'); ?>"><i class="icon-chevron-left"></i></a></li>
-		  <?php endif; ?>  
-		  
-		  <?php if ( rise_node_pagination($node, 'n') != NULL ) : ?>
-			  <li class="nextProject-mobile"><a href="#!node/<?php print rise_node_pagination($node, 'n'); ?>"><i class="icon-chevron-right"></i></a></li>
-			<?php endif; ?>  				
-				</ul>
-			</div>
+  <ul>	
+	<?php if ( rise_node_pagination($node, 'p') != NULL ) : ?>
+	  <li class="prevProject-mobile"><a href="#!node/<?php print rise_node_pagination($node, 'p'); ?>"><i class="icon-chevron-left"></i></a></li>
+  <?php endif; ?>  
+  
+  <?php if ( rise_node_pagination($node, 'n') != NULL ) : ?>
+	  <li class="nextProject-mobile"><a href="#!node/<?php print rise_node_pagination($node, 'n'); ?>"><i class="icon-chevron-right"></i></a></li>
+	<?php endif; ?>  				
+	</ul>
+</div>
 
 <section class="row heading left-text">
 	<!-- project index and specs -->
