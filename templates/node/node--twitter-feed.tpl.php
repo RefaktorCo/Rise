@@ -43,15 +43,22 @@ if($username[0]) {
 
 ?>
 
-<style>
-.twitter-<?php print $node->nid; ?>{
-  background:url(<?php echo file_create_url($node->field_twitter_background_image['und'][0]['uri']); ?>);
-  background-attachment:fixed;
-  background-size:cover;
+<?php 
+if (render($content['field_twitter_background_image'])) {
+  drupal_add_css(
+    '.twitter-'.$node->nid.'{background: url('. file_create_url($node->field_twitter_background_image['und'][0]['uri']) .');}',
+    array(
+      'group' => CSS_THEME,
+      'type' => 'inline',
+      'media' => 'screen',
+      'preprocess' => FALSE,
+      'weight' => '9999',
+    )
+  );
 }
-</style>
+?>
 
-<div id="twitter" class="twitter-<?php print $node->nid; ?>" data-stellar-background-ratio="0.5">
+<div id="twitter" class="twitter-<?php print $node->nid; ?> twitter-parallax" data-stellar-background-ratio="0.5">
 	<div class="tint largepadding">
 		<section class="row heading">
 		<div class="ten columns centered">

@@ -22,6 +22,11 @@ div.messages {
   width: auto;
 }
 
+.clients-image, .twitter-parallax, .parallax-image {
+  background-attachment:fixed !important;
+  background-size:cover !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	HEADER/NAV
 /*-----------------------------------------------------------------------------------*/

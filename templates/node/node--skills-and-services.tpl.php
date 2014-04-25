@@ -16,7 +16,7 @@
 	
 	<!-- read more button -->
 	<div class="modal-button">
-		<a href="#" gumby-trigger="#modal_<?php print $node->nid; ?>" class="rise-btn small outline dark centered switch">read more</a>
+		<a href="#" data-trigger="#modal_<?php print $node->nid; ?>" class="rise-btn small outline dark centered switch">read more</a>
 		
 	</div>
 </div>
@@ -27,7 +27,7 @@
 		<div class="content white">
 			<!-- we use gumby-trigger to close modal with id#direction
 				your can have as many models as your choose just use different ids -->
-			<a class="close switch active" gumby-trigger="|#modal_<?php print $node->nid; ?>"><i class="fa fa-times black-text"></i></a>
+			<a class="close switch active" data-trigger="|#modal_<?php print $node->nid; ?>"><i class="fa fa-times black-text"></i></a>
 			<div class="row">
 				<div class="modal-label">
 					<h6 class="small-radius s-bold"><?php print t('SKILLS AND SERVICES'); ?></h6>

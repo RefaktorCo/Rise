@@ -68,7 +68,19 @@ jQuery(document).ready(function ($) {
   var options = { videoId: "<?php print strip_tags(render($content['field_intro_video_background']));?>", start: 12 };
 	$('#intro').tubular(options);		    });
 </script>
-<style>
-#intro.tint{background: none;}
-</style>
+<?php 
+
+drupal_add_css(
+  '#intro.tint {background: none;}',
+  array(
+    'group' => CSS_THEME,
+    'type' => 'inline',
+    'media' => 'screen',
+    'preprocess' => FALSE,
+    'weight' => '9999',
+  )
+);
+
+?>
+
 <?php endif; ?>
