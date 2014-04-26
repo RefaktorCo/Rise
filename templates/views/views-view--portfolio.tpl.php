@@ -34,7 +34,7 @@
 		<section class="row">
 			<div class="ajax-nav-mobile">
 				<ul>
-					<li class="closeProject-mobile"><a href="#"><i class="icon-remove"></i></a></li>
+					<li class="closeProject-mobile"><a href="#"><i class="fa fa-times"></i></a></li>
 				</ul>
 			</div>
 		  <!-- END PROJECT NAVIGATION AND CLOSE BUTTON -->
