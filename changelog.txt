@@ -1,2 +1,7 @@
+1.0.1 (05/15/14)
+	*Updated Drupal core in full install.
+	*Fixed PHP 5.3 bug in Rise menu module.
+	*Responsive design fixes.
+
 1.0 (04/25/14)
   *Initial release.

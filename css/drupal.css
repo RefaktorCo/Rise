@@ -18,7 +18,13 @@ div.messages {
 	margin-top: 20px;
 }
 
+.ajax-nav {
+  width: auto;
+}
 
+.ajax-section.white {
+	padding: 0px;
+}
 
 .clients-image, .twitter-parallax, .parallax-image {
   background-attachment:fixed !important;

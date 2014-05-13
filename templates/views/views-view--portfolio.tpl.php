@@ -28,7 +28,7 @@
  */
 ?>
 <!-- mobile ajax section -->
-<div class="ajax-section">
+<div class="ajax-section white">
 	<div class="clearfix">
 		<!-- PROJECT NAVIGATION AND CLOSE BUTTON -->
 		<section class="row">
