@@ -106,7 +106,7 @@ function rise_menu_tree__site_navigation(&$variables) {
  */
 function rise_block_view_alter(&$data, $block) {
 
-  if ( ($block->region == 'site_navigation') && ($data['subject'] != 'Rise Menu')) {
+  if ( ($block->region == 'site_navigation') && (isset($data['subject']) != 'Rise Menu')) {
     $data['content']['#theme_wrappers'] = array('menu_tree__site_navigation');
   }
   
