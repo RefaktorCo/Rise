@@ -46,10 +46,8 @@
 ?>
 
 <?php if ($element['#view_mode']=="teaser") { ?>
-  <?php foreach ($items as $delta => $item):?>
-    <?php $rendered_items[] = drupal_render($item);?>
-  <?php endforeach;?>
-  <?php print implode(' & ', $rendered_items);?>
+<?php foreach ($items as $delta => $item): ?><?php print str_replace(' ', '-', render($item)); ?> 
+<?php endforeach; ?>
 <?php } else { ?>
 <?php foreach ($items as $delta => $item): ?>
   <li><?php print render($item); ?></li>

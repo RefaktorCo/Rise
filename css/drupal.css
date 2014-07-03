@@ -2,6 +2,15 @@
 /*	GENERAL/MISC
 /*-----------------------------------------------------------------------------------*/
 
+.tint .down-arrow a {
+  padding: 20px 25px;
+}
+
+.down-arrow i {
+	margin-left: -20px;
+	margin-right: 5px;
+}
+
 .pull-left {
 	margin-left: 0px;
 }
