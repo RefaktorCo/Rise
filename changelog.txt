@@ -1,3 +1,8 @@
+1.0.2 (07/07/14)
+  *Fixed issue with Portfolio filters and multi-word taxonomy terms.
+  *Fixed broken menu layout for non "Rise Menu" menu blocks.
+  *Fixed parallax background issue on mobile devices.
+  
 1.0.1 (05/15/14)
 	*Updated Drupal core in full install.
 	*Fixed PHP 5.3 bug in Rise menu module.

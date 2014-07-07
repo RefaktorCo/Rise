@@ -106,7 +106,7 @@ function rise_menu_tree__site_navigation(&$variables) {
  */
 function rise_block_view_alter(&$data, $block) {
 
-  if ( ($block->region == 'site_navigation') && (isset($data['subject']) != 'Rise Menu')) {
+  if ( ($block->region == 'site_navigation') && (isset($data['subject'])) && ($data['subject'] != 'Rise Menu') ) {
     $data['content']['#theme_wrappers'] = array('menu_tree__site_navigation');
   }
   
@@ -249,8 +249,6 @@ function rise_textfield($variables) {
  * Overrides theme_field().
  */
 function rise_field($variables) {
-
-  $customFields = array('field_portfolio_video','field_portfolio_category','field_portfolio_client','field_portfolio_website');
  
   $output = '';
  
@@ -270,7 +268,7 @@ function rise_field($variables) {
     foreach ($variables['items'] as $delta => $item) {
       $rendered_items[] = drupal_render($item);
     }
-    $output .= implode(' ', $rendered_items);
+    $output .= implode(', ', $rendered_items);
   }
   
   elseif ($variables['element']['#field_name'] == 'field_article_embed') {

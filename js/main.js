@@ -1,5 +1,9 @@
 jQuery(document).ready(function ($) {
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		jQuery('body').addClass('rise-mobile-device');
+	}
+
   /* intro text slider initialize
 	=========================*/
 	$('.intro-text-slider').flexslider({

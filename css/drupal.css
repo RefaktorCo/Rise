@@ -40,6 +40,12 @@ div.messages {
   background-size:cover !important;
 }
 
+
+.rise-mobile-device .clients-image, .rise-mobile-device .twitter-parallax, .rise-mobile-device .parallax-image {
+  background-attachment:scroll !important;
+}
+
+
 #sidebar-left {
 	padding-right: 40px;
 	overflow: auto;
@@ -114,6 +120,7 @@ ul.navigation.active {
 	  line-height: inherit;
 	  min-height: inherit;
 	}
+	
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -546,6 +553,17 @@ textarea {
 /*-----------------------------------------------------------------------------------*/
 /*	PORTFOLIO
 /*-----------------------------------------------------------------------------------*/
+
+.project-spec a {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 12px;
+	padding: 8px 14px !important;
+	background: #f7f5f5;
+	border-radius: 2px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
 
 .mobile-pagination {
 	margin-top: -190px;

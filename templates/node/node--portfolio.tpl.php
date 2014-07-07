@@ -12,12 +12,14 @@
 
 <section class="row heading left-text">
 	<!-- project index and specs -->
+	<?php if (render($content['field_portfolio_category'])): ?>
 	<div class="bigbottompadding">
 		<ul class="project-spec">
 			<li class="index"><?php print t('CATEGORY:'); ?></li>
-			<?php print render($content['field_portfolio_category']); ?>
+			<?php print str_replace(', ', ' ', render($content['field_portfolio_category'])); ?>
 		</ul>
 	</div>
+	<?php endif; ?>
 	<!-- project title -->
 	<h2 class="bold"><?php print $title; ?></h2>
 	<!-- project detail -->
