@@ -56,13 +56,16 @@ function returnTweet($token, $token_secret, $key, $key_secret, $handle){
   $composite_key = rawurlencode($consumer_secret) . '&' . rawurlencode($oauth_access_token_secret);
   $oauth_signature = base64_encode(hash_hmac('sha1', $base_info, $composite_key, true));
   $oauth['oauth_signature'] = $oauth_signature;
+  
+  $url = "https://api.twitter.com/1.1/statuses/$twitter_timeline.json?". http_build_query($request);
+  $url = str_replace("&amp;","&",$url);
 
   //make request
   $header = array(buildAuthorizationHeader($oauth), 'Expect:');
   $options = array( 
   	CURLOPT_HTTPHEADER => $header,
     CURLOPT_HEADER => false,
-    CURLOPT_URL => "https://api.twitter.com/1.1/statuses/$twitter_timeline.json?". http_build_query($request),
+    CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_SSL_VERIFYPEER => false
   );
