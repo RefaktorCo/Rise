@@ -40,12 +40,12 @@ function returnTweet($token, $token_secret, $key, $key_secret, $handle){
   );
 
   $oauth = array(
-	  'oauth_consumer_key' => $consumer_key,
-	  'oauth_nonce' => time(),
-	  'oauth_signature_method' => 'HMAC-SHA1',
-	  'oauth_token' => $oauth_access_token,
-	  'oauth_timestamp' => time(),
-	  'oauth_version'  => '1.0'
+    'oauth_consumer_key' => $consumer_key,
+    'oauth_nonce' => time(),
+    'oauth_signature_method' => 'HMAC-SHA1',
+    'oauth_token' => $oauth_access_token,
+    'oauth_timestamp' => time(),
+    'oauth_version'  => '1.0'
   );
 
   //merge request and oauth to one array
@@ -63,7 +63,7 @@ function returnTweet($token, $token_secret, $key, $key_secret, $handle){
   //make request
   $header = array(buildAuthorizationHeader($oauth), 'Expect:');
   $options = array( 
-  	CURLOPT_HTTPHEADER => $header,
+    CURLOPT_HTTPHEADER => $header,
     CURLOPT_HEADER => false,
     CURLOPT_URL => $url,
     CURLOPT_RETURNTRANSFER => true,
