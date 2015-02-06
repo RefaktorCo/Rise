@@ -9,6 +9,46 @@ $parent_root = base_path() . drupal_get_path('theme', 'rise');
 require_once(drupal_get_path('theme', 'rise').'/includes/twitter.inc');
 
 /**
+ * Add list classes for links in "Header Menu" region.
+ */
+function rise_menu_link__site_navigation(array $variables) {
+  $output = '';
+  unset($variables['element']['#attributes']['class']);
+  $element = $variables['element'];
+  static $item_id = 0;
+  $menu_name = $element['#original_link']['menu_name'];
+
+  // set the global depth variable
+  global $depth;
+  $depth = $element['#original_link']['depth'];
+  
+  $sub_menu = $element['#below'] ? drupal_render($element['#below']) : '';
+  $output .= l($element['#title'], $element['#href'], $element['#localized_options']);
+  // if link class is active, make li class as active too
+  if(strpos($output,"active")>0){
+    $element['#attributes']['class'][] = "active";
+  }
+ 
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . '</li>';
+  
+}
+
+/**
+ * Define class for first menu UL.
+ */
+function rise_menu_tree__site_navigation($variables){
+  return '<ul class="navigation">' . $variables['tree'] . '</ul>';
+  
+}
+
+/**
+ * Define class for all other menu ULs.
+ */
+function rise_menu_tree__site_navigation_below($variables){
+  return '<div class="dropdown"><ul>' . $variables['tree'] . '</ul></div>';
+}
+
+/**
  * Modify theme_js_alter()
  */
 function rise_js_alter(&$js) {
@@ -94,14 +134,6 @@ function rise_preprocess_username(&$vars) {
 
 
 /**
- * Overrides theme_menu_tree().
- */
-function rise_menu_tree__site_navigation(&$variables) {
-  return '<ul class="navigation">' . $variables['tree'] . '</ul>';
-}
-
-
-/**
  * Implements hook_block_view_alter() for "Site Navigation" region.
  */
 function rise_block_view_alter(&$data, $block) {
@@ -109,8 +141,44 @@ function rise_block_view_alter(&$data, $block) {
   if ( ($block->region == 'site_navigation') && (isset($data['subject'])) && ($data['subject'] != 'Rise Menu') ) {
     $data['content']['#theme_wrappers'] = array('menu_tree__site_navigation');
   }
-  
+
+  if ( ($block->region == 'site_navigation') && !isset($data['content']['#type']) && $block->module != 'rise_module' ) {   
+    $data['content']['#theme_wrappers'] = array('menu_tree__site_navigation');
+
+    foreach($data['content'] as &$key):
+     
+      if (isset($key['#theme'])) {
+        $key['#theme'] = 'menu_link__site_navigation';
+      }
+      if (isset($key['#below']['#theme_wrappers'])) {
+        $key['#below']['#theme_wrappers'] = array('menu_tree__site_navigation_below');
+      }
+      
+      if (isset($key['#below'])) {
+        foreach($key['#below'] as &$key2):
+        
+           if (isset($key2['#theme'])) {
+             $key2['#theme'] = 'menu_link__site_navigation';
+           }
+           if (isset($key2['#below']['#theme_wrappers'])) {
+             $key2['#below']['#theme_wrappers'] = array('menu_tree__site_navigation_below');
+           }
+           if (isset($key2['#below'])) {
+              foreach($key2['#below'] as &$key3):
+              
+                if (isset($key3['#theme'])) {
+                  $key3['#theme'] = 'menu_link__site_navigation';
+                }
+              endforeach;
+              
+           }
+        endforeach;
+       
+      }
+    endforeach;
+  }
 }
+
 
 /**
 * Implements hook_form_contact_site_form_alter().
