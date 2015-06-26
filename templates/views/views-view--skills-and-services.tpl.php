@@ -39,7 +39,7 @@
   <?php endif; ?>
 	
 	<!-- begin services -->
-	<section class="row midtoppadding">
+	<section class="midtoppadding">
 	
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

@@ -1,3 +1,8 @@
+1.0.3 (06/26/15)
+  *Updated prettyPhoto to 3.1.6
+  *Updated Drupal core in full install.
+  *Minor style/bug fixes.
+
 1.0.2 (07/07/14)
   *Fixed issue with Portfolio filters and multi-word taxonomy terms.
   *Fixed broken menu layout for non "Rise Menu" menu blocks.

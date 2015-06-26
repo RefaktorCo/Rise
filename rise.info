@@ -2,7 +2,7 @@ name = Rise
 description = Responsive One Page Parallax Drupal 7 Theme. 
 core = 7.x
 engine = phptemplate
-version = 1.0.2
+version = 1.0.3
 
 ; Define theme stylesheets.
 stylesheets[all][] = css/gumby.css
